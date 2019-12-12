@@ -13,27 +13,108 @@ img {
     width: 100%;
 }
 
-h1 {}
-
-h2 {
+h1 {
+    font-family: 'Roboto', sans-serif;
     color: white;
     font-size: 2rem;
 }
 
-h3 {
+h2 {
+    font-family: 'Roboto', sans-serif;
     color: white;
+    font-size: 3rem;
+}
 
+h3 {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 2rem;
 }
 
 h4 {
+    font-family: 'Roboto', sans-serif;
     color: white;
+    font-size: 2rem;
 }
 
 h5 {
+    font-family: 'Roboto', sans-serif;
     color: white;
+    font-size: 2rem;
 }
 
-p {}
+H6 {
+    font-family: 'Roboto', sans-serif;
+    color: orange;
+    font-size: 1rem;
+    margin: 5px;
+}
+
+p {
+    font-family: 'Courier Prime', monospace;
+    color: white;
+    font-size: 1rem;
+}
+
+/******************ANIMATION***********************/
+
+#ani_logo path:nth-child(1) {
+    stroke-dasharray: 774.0;
+    stroke-dashoffset: 774.0;
+    animation: line-ani 1.5s ease forwards;
+}
+
+#ani_logo path:nth-child(2) {
+    stroke-dasharray: 1036.3;
+    stroke-dashoffset: 1036.3;
+    animation: line-ani 1.5s ease forwards .3s;
+}
+
+#ani_logo path:nth-child(3) {
+    stroke-dasharray: 1029.2;
+    stroke-dashoffset: 1029.2;
+    animation: line-ani 1.5s ease forwards .6s;
+}
+
+#ani_logo path:nth-child(4) {
+    stroke-dasharray: 1118.6;
+    stroke-dashoffset: 1118.6;
+    animation: line-ani 1.5s ease forwards .9s;
+}
+
+#ani_logo path:nth-child(5) {
+    stroke-dasharray: 1212.1;
+    stroke-dashoffset: 1212.1;
+    animation: line-ani 1.5s ease forwards 1.2s;
+}
+
+#ani_logo path:nth-child(6) {
+    stroke-dasharray: 1078.7;
+    stroke-dashoffset: 1078.7;
+    animation: line-ani 1.5s ease forwards 1.5s;
+}
+
+#ani_logo path:nth-child(7) {
+    stroke-dasharray: 1118.6453857421875;
+    stroke-dashoffset: 1118.6453857421875;
+    animation: line-ani 1.5s ease forwards 1.8s;
+}
+
+@keyframes line-ani {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        fill: orange;
+    }
+}
 
 /******************Designelementer***********************/
 
@@ -66,7 +147,10 @@ p {}
 
 }
 
-
+.soMe_ikon {
+    width: 5vw;
+    height: 5vw;
+}
 
 /******************HEADER***********************/
 
@@ -85,11 +169,11 @@ nav {
 }
 
 #logo {
-    width: 10vw;
-    height: 10vw;
+    width: 20vw;
+    height: 20vw;
     position: relative;
     top: 0;
-    left: 40vw;
+    left: 30vw;
     z-index: 1;
 }
 
@@ -125,10 +209,12 @@ nav {
 }
 
 #lp_SoMe {
-    margin: 10vw 20vw;
-    width: 60vw;
-    height: 10vw;
-    background-color: aqua;
+    margin: 13vw 25vw;
+    width: 50vw;
+    height: 5vw;
+    display: grid;
+    grid-template-columns: 5vw 5vw 5vw 5vw 5vw;
+    justify-content: space-around;
 }
 
 #lp_owmi {
@@ -141,22 +227,24 @@ nav {
 
 #video_section {
     width: 100vw;
-    height: 200vw;
+    height: 150vw;
 }
 
 #video_fs {
     width: 100vw;
     height: 56.25vw;
+    margin: 0 0 5vw 0;
 }
 
 #video_fs iframe {
     width: 100vw;
     height: 56.25vw;
+
 }
 
 #video_content_top {
     width: 90vw;
-    height: 100vw;
+    height: 75vw;
     display: grid;
     grid-template-columns: 70vw 20vw;
     margin: 0 5vw 0 5vw;
@@ -172,17 +260,16 @@ nav {
 
 #video_content_bund {
     width: 90vw;
-    height: 20vw;
+    height: 80vw;
     display: grid;
     grid-template-rows: 20vw 60vw;
-    margin: 0 5vw 0 5vw;
-
+    margin: 5vw;
+    /*    display: none;*/
 }
 
 #video_info {
-    display: none;
-    width: 80vw;
-    height: 60vw;
+    width: 90vw;
+    height: 80vw;
     border: 1px solid white;
 }
 
@@ -190,7 +277,7 @@ nav {
 
 #nyheder {
     width: 90vw;
-    height: 200vw;
+    height: 210vw;
     margin: 0 5vw 0 5vw;
 
 }
@@ -229,17 +316,18 @@ nav {
 
 /******************OM***********************/
 
+#ani_logo {
+    height: 10vh;
+    width: 90vw;
+    animation: 1s fill ease forwards 3s;
+    margin: 0 auto;
+}
+
 #om {
     width: 90vw;
     height: 270vw;
     margin: 0 5vw 0 5vw;
 
-}
-
-#om_animation {
-    width: 90vw;
-    height: 50vw;
-    border: 1px solid white;
 }
 
 #om_content {
@@ -274,4 +362,13 @@ footer {
     width: 100vw;
     height: 50vw;
     background-color: black;
+}
+
+#footer_SoMe {
+    margin: 13vw 25vw;
+    width: 50vw;
+    height: 5vw;
+    display: grid;
+    grid-template-columns: 5vw 5vw 5vw 5vw 5vw;
+    justify-content: space-around;
 }

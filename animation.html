@@ -18,7 +18,7 @@
             background-color: black;
         }
 
-        #logo {
+        #ani_logo {
             height: 8vh;
             width: 100%;
             position: absolute;
@@ -28,43 +28,43 @@
             animation: 1s fill ease forwards 3s;
         }
 
-        #logo path:nth-child(1) {
+        #ani_logo path:nth-child(1) {
             stroke-dasharray: 774.0;
             stroke-dashoffset: 774.0;
             animation: line-ani 1.5s ease forwards;
         }
 
-        #logo path:nth-child(2) {
+        #ani_logo path:nth-child(2) {
             stroke-dasharray: 1036.3;
             stroke-dashoffset: 1036.3;
             animation: line-ani 1.5s ease forwards .3s;
         }
 
-        #logo path:nth-child(3) {
+        #ani_logo path:nth-child(3) {
             stroke-dasharray: 1029.2;
             stroke-dashoffset: 1029.2;
             animation: line-ani 1.5s ease forwards .6s;
         }
 
-        #logo path:nth-child(4) {
+        #ani_logo path:nth-child(4) {
             stroke-dasharray: 1118.6;
             stroke-dashoffset: 1118.6;
             animation: line-ani 1.5s ease forwards .9s;
         }
 
-        #logo path:nth-child(5) {
+        #ani_logo path:nth-child(5) {
             stroke-dasharray: 1212.1;
             stroke-dashoffset: 1212.1;
             animation: line-ani 1.5s ease forwards 1.2s;
         }
 
-        #logo path:nth-child(6) {
+        #ani_logo path:nth-child(6) {
             stroke-dasharray: 1078.7;
             stroke-dashoffset: 1078.7;
             animation: line-ani 1.5s ease forwards 1.5s;
         }
 
-        #logo path:nth-child(7) {
+        #ani_logo path:nth-child(7) {
             stroke-dasharray: 1118.6453857421875;
             stroke-dashoffset: 1118.6453857421875;
             animation: line-ani 1.5s ease forwards 1.8s;
@@ -91,7 +91,7 @@
 </head>
 
 <body>
-    <svg id="logo" width="1347" height="228" viewBox="0 0 1347 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg id="ani_logo" width="1347" height="228" viewBox="0 0 1347 228" fill="none" xmlns="http://www.w3.org/2000/svg">
 
         <path d="M178.59 43.3145H113.258V221H69.3125V43.3145H4.85938V7.71875H178.59V43.3145Z" stroke="orange" stroke-width="8" mask="url(#path-1-outside-1)" />
         <path d="M374.879 119.193C374.879 140.189 371.168 158.598 363.746 174.418C356.324 190.238 345.68 202.445 331.812 211.039C318.043 219.633 302.223 223.93 284.352 223.93C266.676 223.93 250.904 219.682 237.037 211.186C223.17 202.689 212.428 190.58 204.811 174.857C197.193 159.037 193.336 140.873 193.238 120.365V109.818C193.238 88.8223 196.998 70.3652 204.518 54.4473C212.135 38.4316 222.828 26.1758 236.598 17.6797C250.465 9.08594 266.285 4.78906 284.059 4.78906C301.832 4.78906 317.604 9.08594 331.373 17.6797C345.24 26.1758 355.934 38.4316 363.453 54.4473C371.07 70.3652 374.879 88.7734 374.879 109.672V119.193ZM330.348 109.525C330.348 87.1621 326.344 70.1699 318.336 58.5488C310.328 46.9277 298.902 41.1172 284.059 41.1172C269.312 41.1172 257.936 46.8789 249.928 58.4023C241.92 69.8281 237.867 86.625 237.77 108.793V119.193C237.77 140.971 241.773 157.865 249.781 169.877C257.789 181.889 269.312 187.895 284.352 187.895C299.098 187.895 310.426 182.133 318.336 170.609C326.246 158.988 330.25 142.094 330.348 119.926V109.525Z" stroke="orange" stroke-width="8" mask="url(#path-1-outside-1)" />
@@ -103,7 +103,7 @@
     </svg>
 
     <script>
-        const logo = document.querySelectorAll('#logo path')
+        const logo = document.querySelectorAll('#ani_logo path')
 
         for (let i = 0; i < logo.length; i++) {
             console.log(`Letter ${i} is ${logo[i].getTotalLength()}`)
