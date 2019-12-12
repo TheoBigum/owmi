@@ -15,7 +15,10 @@ img {
 
 h1 {}
 
-h2 {}
+h2 {
+    color: white;
+    font-size: 2rem;
+}
 
 h3 {
     color: white;
@@ -111,8 +114,7 @@ nav {
 #lp_owmi {
     margin: 10vw 10vw;
     width: 80vw;
-    height: 40vw;
-    background-color: olive;
+    height: 43vw;
 }
 
 /******************VIDEO SECTION***********************/
@@ -125,20 +127,25 @@ nav {
 #video_fs {
     width: 100vw;
     height: 56.25vw;
-    background-color: orange;
+}
+
+#video_fs iframe {
+    width: 100vw;
+    height: 56.25vw;
 }
 
 #video_content_top {
-    width: 100vw;
+    width: 70vw;
     height: 100vw;
     display: grid;
     grid-template-columns: 80vw 20vw;
 }
 
 #video_menu {
-    height: 100vw;
-    width: 80vw;
-    background-color: aquamarine;
+    height: 70vw;
+    width: 75vw;
+    border: white solid 1px;
+
 }
 
 #video_content_bund {
@@ -151,7 +158,7 @@ nav {
 .ikon_plus {
     width: 100vw;
     height: 20vw;
-    background-color: yellow;
+    border: white solid 1px;
 }
 
 #video_info {
