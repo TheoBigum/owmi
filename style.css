@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-image: url(billederTilWeb/baggrund.jpg);
+    background-size: cover;
+    height: 300vw;
+}
+
+img {
+    width: 100%;
+}
+
+h1 {}
+
+h2 {}
+
+h3 {
+    color: white;
+
+}
+
+h4 {}
+
+h5 {
+    color: white;
+}
+
+p {}
+
+/******************HEADER***********************/
+
+header {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    ;
+}
+
+nav {
+    color: wheat;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+}
+
+#logo {
+    width: 10vw;
+    height: 10vw;
+    position: relative;
+    top: 0;
+    left: 40vw;
+    z-index: 1;
+}
+
+
+/******************LANDING PAGE***********************/
+
+#landingPage {
+    width: 100vw;
+    height: 150vw;
+}
+
+#lp_baggrund {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 110vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 80%;
+    background-image: url(billederTilWeb/lp_baggrund.jpg);
+}
+
+#lp_content {
+    margin: 55vw 20vw 0 20vw;
+    width: 60vw;
+    height: 50vw;
+}
+
+#lp_content img {
+    width: 40vw;
+    height: 40vw;
+}
+
+#lp_SoMe {
+    margin: 0 20vw;
+    width: 60vw;
+    height: 10vw;
+    background-color: aqua;
+}
