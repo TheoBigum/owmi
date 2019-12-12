@@ -25,7 +25,9 @@ h3 {
 
 }
 
-h4 {}
+h4 {
+    color: white;
+}
 
 h5 {
     color: white;
@@ -38,14 +40,32 @@ p {}
 .design_element_l {
     height: 100vw;
     width: 20vw;
-    background-color: forestgreen;
+    background-image: url(assets/designElementer/SVG/designElementLyseroed.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .design_element_o {
     height: 20vw;
-    width: 100vw;
-    background-color: forestgreen;
+    width: 90vw;
+    background-image: url(assets/designElementer/SVG/designElementOrange.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
 }
+
+.ikon_plus {
+    height: 12vw;
+    width: 12vw;
+    background-image: url(assets/designElementer/SVG/designElementPlus.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid blue;
+    margin: 0 auto;
+
+}
+
 
 
 /******************HEADER***********************/
@@ -77,7 +97,7 @@ nav {
 /******************LANDING PAGE***********************/
 
 #landingpage {
-    width: 100vw;
+    width: 90vw;
     height: 200vw;
 }
 
@@ -135,113 +155,117 @@ nav {
 }
 
 #video_content_top {
-    width: 70vw;
+    width: 90vw;
     height: 100vw;
     display: grid;
-    grid-template-columns: 80vw 20vw;
+    grid-template-columns: 70vw 20vw;
+    margin: 0 5vw 0 5vw;
+
 }
 
 #video_menu {
-    height: 70vw;
-    width: 75vw;
+    height: 60vw;
+    width: 70vw;
     border: white solid 1px;
 
 }
 
 #video_content_bund {
-    width: 100vw;
-    height: 100vw;
+    width: 90vw;
+    height: 20vw;
     display: grid;
     grid-template-rows: 20vw 60vw;
-}
+    margin: 0 5vw 0 5vw;
 
-.ikon_plus {
-    width: 100vw;
-    height: 20vw;
-    border: white solid 1px;
 }
 
 #video_info {
     display: none;
-    width: 100vw;
+    width: 80vw;
     height: 60vw;
-    background-color: red;
+    border: 1px solid white;
 }
 
 /******************NYHEDER***********************/
 
 #nyheder {
-    width: 100vw;
+    width: 90vw;
     height: 200vw;
+    margin: 0 5vw 0 5vw;
+
 }
 
 .nyheder_col {
-    width: 100vw;
+    width: 90vwvw;
     height: 100vw;
 }
 
 .nyheder_col_top {
-    width: 100vw;
+    width 90vw;
     height: 56.25vw;
-    background-color: orangered;
+    border: 1px solid white;
 }
 
 .nyheder_col_bund {
-    width: 100vw;
+    width: 90vw;
     height: 30vw;
-    background-color: orange;
+    border: 1px solid white;
 }
 
 /******************KONCERTER***********************/
 
 #koncerter {
-    width: 100vw;
+    width: 90vw;
     height: 100vw;
+    margin: 0 5vw 0 5vw;
+
 }
 
 #koncert_info {
-    width: 100vw;
+    width: 90vw;
     height: 70vw;
-    background-color: purple;
+    border: 1px solid white;
 }
 
 /******************OM***********************/
 
 #om {
-    width: 100vw;
+    width: 90vw;
     height: 270vw;
+    margin: 0 5vw 0 5vw;
+
 }
 
 #om_animation {
-    width: 100vw;
+    width: 90vw;
     height: 50vw;
-    background-color: beige;
+    border: 1px solid white;
 }
 
 #om_content {
-    width: 100vw;
+    width: 90vw;
     height: 200vw;
     display: grid;
     grid-template-rows: 100vw 100vw;
 }
 
 #om_content_top {
-    width: 100vw;
+    width: 90vw;
     height: 100vw;
-    background-color: blue;
+    border: 1px solid white;
 }
 
 #om_content_bund {
-    width: 100vw;
+    width: 90vw;
     height: 100vw;
-    background-color: skyblue;
+    border: 1px solid white;
 }
 
 #lyt_knap {
     width: 50vw;
     height: 20vw;
-    margin: 0 25vw;
-    background-color: pink;
+    margin: 0 20vw;
+    border: 1px solid white;
 }
 
 /******************FOOTER***********************/
