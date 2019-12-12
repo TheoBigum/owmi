@@ -30,6 +30,21 @@ h5 {
 
 p {}
 
+/******************Designelementer***********************/
+
+.design_element_l {
+    height: 100vw;
+    width: 20vw;
+    background-color: forestgreen;
+}
+
+.design_element_o {
+    height: 20vw;
+    width: 100vw;
+    background-color: forestgreen;
+}
+
+
 /******************HEADER***********************/
 
 header {
@@ -58,9 +73,9 @@ nav {
 
 /******************LANDING PAGE***********************/
 
-#landingPage {
+#landingpage {
     width: 100vw;
-    height: 150vw;
+    height: 200vw;
 }
 
 #lp_baggrund {
@@ -87,8 +102,145 @@ nav {
 }
 
 #lp_SoMe {
-    margin: 0 20vw;
+    margin: 10vw 20vw;
     width: 60vw;
     height: 10vw;
     background-color: aqua;
+}
+
+#lp_owmi {
+    margin: 10vw 10vw;
+    width: 80vw;
+    height: 40vw;
+    background-color: olive;
+}
+
+/******************VIDEO SECTION***********************/
+
+#video_section {
+    width: 100vw;
+    height: 200vw;
+}
+
+#video_fs {
+    width: 100vw;
+    height: 56.25vw;
+    background-color: orange;
+}
+
+#video_content_top {
+    width: 100vw;
+    height: 100vw;
+    display: grid;
+    grid-template-columns: 80vw 20vw;
+}
+
+#video_menu {
+    height: 100vw;
+    width: 80vw;
+    background-color: aquamarine;
+}
+
+#video_content_bund {
+    width: 100vw;
+    height: 100vw;
+    display: grid;
+    grid-template-rows: 20vw 60vw;
+}
+
+.ikon_plus {
+    width: 100vw;
+    height: 20vw;
+    background-color: yellow;
+}
+
+#video_info {
+    display: none;
+    width: 100vw;
+    height: 60vw;
+    background-color: red;
+}
+
+/******************NYHEDER***********************/
+
+#nyheder {
+    width: 100vw;
+    height: 200vw;
+}
+
+.nyheder_col {
+    width: 100vw;
+    height: 100vw;
+}
+
+.nyheder_col_top {
+    width: 100vw;
+    height: 56.25vw;
+    background-color: orangered;
+}
+
+.nyheder_col_bund {
+    width: 100vw;
+    height: 30vw;
+    background-color: orange;
+}
+
+/******************KONCERTER***********************/
+
+#koncerter {
+    width: 100vw;
+    height: 100vw;
+}
+
+#koncert_info {
+    width: 100vw;
+    height: 70vw;
+    background-color: purple;
+}
+
+/******************OM***********************/
+
+#om {
+    width: 100vw;
+    height: 270vw;
+}
+
+#om_animation {
+    width: 100vw;
+    height: 50vw;
+    background-color: beige;
+}
+
+#om_content {
+    width: 100vw;
+    height: 200vw;
+    display: grid;
+    grid-template-rows: 100vw 100vw;
+}
+
+#om_content_top {
+    width: 100vw;
+    height: 100vw;
+    background-color: blue;
+}
+
+#om_content_bund {
+    width: 100vw;
+    height: 100vw;
+    background-color: skyblue;
+}
+
+#lyt_knap {
+    width: 50vw;
+    height: 20vw;
+    margin: 0 25vw;
+    background-color: pink;
+}
+
+/******************FOOTER***********************/
+
+footer {
+    width: 100vw;
+    height: 50vw;
+    background-color: black;
 }
