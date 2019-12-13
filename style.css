@@ -5,8 +5,9 @@
 body {
     box-sizing: border-box;
     background-image: url(billederTilWeb/baggrund.jpg);
-    background-size: cover;
-    height: 300vw;
+    background-size: contain;
+    height: 1200vw;
+
 }
 
 img {
@@ -16,7 +17,7 @@ img {
 h1 {
     font-family: 'Roboto', sans-serif;
     color: white;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 h2 {
@@ -34,13 +35,15 @@ h3 {
 h4 {
     font-family: 'Roboto', sans-serif;
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    margin: 1vw 0;
 }
 
 h5 {
     font-family: 'Roboto', sans-serif;
     color: white;
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 H6 {
@@ -48,6 +51,13 @@ H6 {
     color: orange;
     font-size: 1rem;
     margin: 5px;
+}
+
+H7 {
+    font-family: 'courier prime', monospace;
+    color: white;
+    font-size: 1.5rem;
+
 }
 
 p {
@@ -142,14 +152,13 @@ p {
     background-image: url(assets/designElementer/SVG/designElementPlus.svg);
     background-size: cover;
     background-repeat: no-repeat;
-    border: 1px solid blue;
     margin: 0 auto;
 
 }
 
 .soMe_ikon {
-    width: 5vw;
-    height: 5vw;
+    width: 7vw;
+    height: 7vw;
 }
 
 /******************HEADER***********************/
@@ -169,11 +178,11 @@ nav {
 }
 
 #logo {
-    width: 20vw;
-    height: 20vw;
+    width: 12vh;
+    height: 12vh;
     position: relative;
-    top: 0;
-    left: 30vw;
+    top: 1vw;
+    left: 25vw;
     z-index: 1;
 }
 
@@ -182,7 +191,7 @@ nav {
 
 #landingpage {
     width: 90vw;
-    height: 200vw;
+    height: 80vh;
 }
 
 #lp_baggrund {
@@ -198,20 +207,21 @@ nav {
 }
 
 #lp_content {
-    margin: 55vw 20vw 0 20vw;
-    width: 60vw;
-    height: 50vw;
+    margin: 25vh 15vw 0 15vw;
+    width: 70vw;
+    height: 55vh;
 }
 
 #lp_content img {
-    width: 40vw;
-    height: 40vw;
+    width: 50vw;
+    height: 50vw;
+    margin: 2vw 0 0 3vw;
 }
 
 #lp_SoMe {
-    margin: 13vw 25vw;
-    width: 50vw;
-    height: 5vw;
+    margin: 10vw 15vw;
+    width: 70vw;
+    height: 7vw;
     display: grid;
     grid-template-columns: 5vw 5vw 5vw 5vw 5vw;
     justify-content: space-around;
@@ -228,6 +238,10 @@ nav {
 #video_section {
     width: 100vw;
     height: 150vw;
+}
+
+#video_section h2 {
+    margin: 0 0 0 5vw;
 }
 
 #video_fs {
@@ -277,20 +291,19 @@ nav {
 
 #nyheder {
     width: 90vw;
-    height: 210vw;
-    margin: 0 5vw 0 5vw;
+    height: 220vw;
+    margin: 0 5vw 5vw 5vw;
 
 }
 
 .nyheder_col {
     width: 90vwvw;
-    height: 100vw;
+    height: 110vw;
 }
 
 .nyheder_col_top {
     width 90vw;
-    height: 56.25vw;
-    border: 1px solid white;
+    max-height: 56.25vw;
 }
 
 .nyheder_col_bund {
@@ -320,7 +333,7 @@ nav {
     height: 10vh;
     width: 90vw;
     animation: 1s fill ease forwards 3s;
-    margin: 0 auto;
+    margin: 5vw auto;
 }
 
 #om {
@@ -350,10 +363,12 @@ nav {
 }
 
 #lyt_knap {
-    width: 50vw;
-    height: 20vw;
-    margin: 0 20vw;
+    width: 200px;
+    height: 50px;
+    margin: 2vw auto;
     border: 1px solid white;
+    text-align: center;
+    line-height: 2rem;
 }
 
 /******************FOOTER***********************/
@@ -361,14 +376,158 @@ nav {
 footer {
     width: 100vw;
     height: 50vw;
-    background-color: black;
 }
 
 #footer_SoMe {
-    margin: 13vw 25vw;
-    width: 50vw;
+    margin: 13vw 20vw;
+    width: 60vw;
     height: 5vw;
     display: grid;
     grid-template-columns: 5vw 5vw 5vw 5vw 5vw;
     justify-content: space-around;
+}
+
+#footer_info {
+    width: 40vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media only screen and (min-width: 700px) {
+
+    h1 {
+        font-size: 4rem;
+
+    }
+
+    h2 {
+        font-size: 4rem;
+        margin: 0;
+    }
+
+    h3 {
+        font-size: 3rem;
+    }
+
+    h4 {}
+
+    h5 {}
+
+    H6 {}
+
+    H7 {
+
+        font-size: 2rem;
+
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    /*******************LANDING PAGE*****************/
+
+    #landingpage {}
+
+    #lp_baggrund {}
+
+    #lp_content {}
+
+    #lp_content img {}
+
+    #lp_SoMe {
+        width: 40vw;
+        margin-left: 30vw;
+    }
+
+    #lp_owmi {
+        margin: 15vw 10vw;
+    }
+
+    /******************Designelementer***********************/
+
+    .design_element_l {
+        height: 100vw;
+        width: 20vw;
+        background-image: url(assets/designElementer/SVG/designElementLyseroed.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .design_element_o {
+        height: 20vw;
+        width: 90vw;
+        background-image: url(assets/designElementer/SVG/designElementOrange.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0 auto;
+    }
+
+    .ikon_plus {
+        height: 12vw;
+        width: 12vw;
+        background-image: url(assets/designElementer/SVG/designElementPlus.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+
+    }
+
+    .soMe_ikon {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    /******************FOOTER***********************/
+
+    footer {}
+
+    #footer_SoMe {
+        margin: 13vw 30vw;
+        width: 40vw;
+    }
+
+}
+
+
+@media only screen and (min-width: 1000px) {
+    /******************LANDING PAGE***********************/
+
+    #landingpage {
+        width: 90vw;
+        height: 40vh;
+    }
+
+    #lp_baggrund {
+        background-position: 50%;
+    }
+
+    #lp_content {
+        margin: 25vh 15vw 0 15vw;
+        width: 70vw;
+        height: 55vh;
+    }
+
+    #lp_content img {
+        width: 500px;
+        height: 500px;
+        margin: 2vw 0 0 3vw;
+    }
+
+    #lp_SoMe {
+        margin: 10vw 15vw;
+        width: 70vw;
+        height: 7vw;
+        display: grid;
+        grid-template-columns: 5vw 5vw 5vw 5vw 5vw;
+        justify-content: space-around;
+    }
+
+    #lp_owmi {
+        margin: 10vw 10vw;
+        width: 80vw;
+        height: 43vw;
+    }
+
 }
