@@ -20,13 +20,18 @@
         </nav>
         <img id="logo" src="assets/designElementer/owmiLogo.png" alt="">
     </header>
+
+    <template id="forside_temp">
+        <article id="lp_content">
+            <h3 class="forside_h3"></h3>
+            <h5 class="forside_h5"></h5>
+            <img class="forside_img">
+        </article>
+    </template>
+    <section id="forside"></section>
     <section id="landingpage">
         <div id="lp_baggrund">
-            <div id="lp_content">
-                <h3>Tourner</h3>
-                <h5>Debutalbum ude nu</h5>
-                <img src="billederTilWeb/cover_album.jpg" alt="Debutalbum cover">
-            </div>
+            <div class="forside"></div>
             <div id="lp_SoMe">
                 <img class="soMe_ikon" src="assets/SoMe/apple.png" alt="">
 
@@ -61,16 +66,22 @@
     </div>
     <section id="nyheder">
         <h2>NYHEDER</h2>
-        <div class="nyheder_col">
-            <h4>OVERSKRIFT</h4>
-            <div class="nyheder_col_top">
-                <img src="billederTilWeb/nyheder_1.jpg" alt="">
-            </div>
-            <div class="nyheder_col_bund">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati distinctio natus dolores, itaque error, aliquam quae autem iste soluta debitis alias fugit quod assumenda voluptatem tempore maxime eius ducimus, cupiditate?</p>
-            </div>
-        </div>
 
+        <template id="nyhed_temp">
+            <article class="nyheder_col">
+                <h4 class="nyhed_h4"></h4>
+                <div class="nyheder_col_top">
+                    <img class="nyhed_img">
+                </div>
+                <div class="nyheder_col_bund">
+                    <p class="nyhed_p"></p>
+                </div>
+            </article>
+        </template>
+
+
+
+        <!--
         <div class="nyheder_col">
             <h4>OVERSKRIFT</h4>
             <div class="nyheder_col_top">
@@ -80,12 +91,15 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque officiis itaque quasi possimus fugit ratione voluptatibus in inventore distinctio veniam, labore qui pariatur, ut obcaecati architecto iure similique laboriosam a.</p>
             </div>
         </div>
+-->
 
-        <template>
+        <!--
+        <template id="nyheder_temp">
             <h4></h4>
-            <img src="" alt="">
+            <img>
             <p></p>
         </template>
+-->
 
     </section>
 
@@ -148,5 +162,6 @@
             console.log(`Letter ${i} is ${logo[i].getTotalLength()}`)
         }
     </script>
+    <script src="script.js"></script>
 
 </body></html>
