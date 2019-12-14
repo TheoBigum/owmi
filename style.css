@@ -7,9 +7,6 @@
 body {
     box-sizing: border-box;
     background-size: contain;
-    height: 1200vw;
-
-
 }
 
 img {
@@ -132,7 +129,7 @@ p {
 
 .design_element_l {
     height: 60vw;
-    width: 20vw;
+    width: 10.96vw;
     background-image: url(assets/designElementer/SVG/designElementLyseroed.svg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -140,7 +137,7 @@ p {
 }
 
 .design_element_o {
-    height: 20vw;
+    height: 10.96vw;
     width: 60vw;
     background-image: url(assets/designElementer/SVG/designElementOrange.svg);
     background-size: contain;
@@ -212,8 +209,10 @@ nav {
 }
 
 #baggrund_bund {
-    background-image: url(billederTilWeb/baggrund.jpg);
+    background-image: url(billederTilWeb/nybg.jpg);
     z-index: 1;
+    background-size: cover;
+    border-top: 2px solid white;
 }
 
 #lp_content {
@@ -316,7 +315,6 @@ nav {
 .nyheder_col_bund {
     width: 90vw;
     height: 30vw;
-    border: 1px solid white;
 }
 
 /******************KONCERTER***********************/
@@ -469,11 +467,56 @@ footer {
     #footer_SoMe {
         margin: 13vw 30vw;
         width: 40vw;
+        grid-template-columns: 2vw 2vw 2vw 2vw 2vw;
+
     }
 
 }
 
 @media only screen and (min-width: 1000px) {
+
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 7rem;
+        margin: 2.5vw 0;
+
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+        letter-spacing: 1.5px;
+        margin: 1vw 0;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+    H6 {
+        font-size: 1rem;
+        margin: 5px;
+    }
+
+    H7 {
+        font-size: 1.5rem;
+
+    }
+
+    p {
+        font-family: 'Courier Prime', monospace;
+        color: white;
+        font-size: 1rem;
+    }
+
+
     /******************LANDING PAGE***********************/
 
     #landingpage {
@@ -484,6 +527,8 @@ footer {
     #lp_baggrund {
         background-position: left 50% top 0%;
         background-size: contain;
+        height: 100vw;
+
     }
 
     #lp_content {
@@ -609,10 +654,10 @@ footer {
 
     #koncerter {
         width: 90vw;
-        height: 40vw;
+        height: 45vw;
         margin: 0 5vw 0 5vw;
         display: grid;
-        grid-template-rows: 10vw 30vw;
+        grid-template-rows: 15vw 30vw;
         grid-template-columns: 45vw 45vw;
 
     }
@@ -643,7 +688,7 @@ footer {
     }
 
     #om {
-        height: 150vw;
+        height: 145vw;
 
     }
 
@@ -675,7 +720,7 @@ footer {
     #lyt_knap {
         width: 200px;
         height: 50px;
-        margin: 2vw auto;
+        margin: 0 auto;
         border: 1px solid white;
         text-align: center;
         line-height: 2rem;
@@ -686,16 +731,20 @@ footer {
 
     footer {
         width: 100vw;
-        height: 20vw;
+        height: 12vw;
+        display: grid;
+        grid-template-columns: 70vw 30vw;
     }
 
     #footer_SoMe {
-        margin: 1vw auto;
-        width: 30vw;
+        margin: 5vw 0 0 5vw;
+        width: 25vw;
         height: 3vw;
+        grid-template-columns: 2vw 2vw 2vw 2vw 2vw;
     }
 
     #footer_info {
+        margin: 5vw 0 0 0;
         width: 30vw;
     }
 
@@ -705,22 +754,16 @@ footer {
 
     .design_element_l {
         height: 30vw;
-        width: 10vw;
+        width: 5.48vw;
         grid-column: 1;
         grid-row: 2;
         margin: 5vw auto;
-
-
     }
 
     .design_element_o {
-        height: 10vw;
-        width: 25vw;
-        background-image: url(assets/designElementer/SVG/designElementOrange.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        margin: 0 auto;
+        height: 5.48vw;
+        width: 30vw;
+        margin: 0 auto 5vw;
     }
 
     .ikon_plus {
