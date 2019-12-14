@@ -4,9 +4,9 @@
 
 body {
     box-sizing: border-box;
-    background-image: url(billederTilWeb/baggrund.jpg);
     background-size: contain;
     height: 1200vw;
+
 
 }
 
@@ -228,6 +228,7 @@ nav {
 }
 
 #lp_owmi {
+    background: none;
     margin: 10vw 10vw;
     width: 80vw;
     height: 43vw;
@@ -494,40 +495,109 @@ footer {
 @media only screen and (min-width: 1000px) {
     /******************LANDING PAGE***********************/
 
+    * {
+        position: relative;
+    }
+
     #landingpage {
         width: 90vw;
         height: 40vh;
     }
 
     #lp_baggrund {
-        background-position: 50%;
+        background-position: left 50% top 0%;
+        background-size: contain;
+        position: fixed;
     }
 
     #lp_content {
-        margin: 25vh 15vw 0 15vw;
-        width: 70vw;
+        margin: 0 55vw 0 15vw;
+        width: 30vw;
         height: 55vh;
+        position: relative;
+
     }
 
     #lp_content img {
-        width: 500px;
-        height: 500px;
-        margin: 2vw 0 0 3vw;
+        width: 300px;
+        height: 300px;
+        margin: 0;
     }
 
     #lp_SoMe {
-        margin: 10vw 15vw;
-        width: 70vw;
-        height: 7vw;
-        display: grid;
-        grid-template-columns: 5vw 5vw 5vw 5vw 5vw;
-        justify-content: space-around;
+        margin: 20vh 0 0 16vw;
+        width: 300px;
+        position: relative;
     }
 
     #lp_owmi {
-        margin: 10vw 10vw;
-        width: 80vw;
-        height: 43vw;
+        margin: 30vw 20vw;
+        width: 60vw;
+        height: 32vw;
+        z-index: 100;
+        position: relative;
+
+    }
+
+    /******************Designelementer***********************/
+
+    .design_element_l {
+        height: 100vw;
+        width: 20vw;
+        background-image: url(assets/designElementer/SVG/designElementLyseroed.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+
+    .design_element_o {
+        height: 20vw;
+        width: 90vw;
+        background-image: url(assets/designElementer/SVG/designElementOrange.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0 auto;
+    }
+
+    .ikon_plus {
+        height: 12vw;
+        width: 12vw;
+        background-image: url(assets/designElementer/SVG/designElementPlus.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+
+    }
+
+    .soMe_ikon {
+        width: 2vw;
+        height: 2vw;
+    }
+
+    /******************HEADER***********************/
+
+    header {
+        display: grid;
+        grid-template-columns: 50vw 50vw;
+        ;
+    }
+
+    nav {
+        color: wheat;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+
+    }
+
+    #logo {
+        width: 15vh;
+        height: 15vh;
+        position: relative;
+        top: 1vw;
+        left: 35vw;
+        z-index: 1;
     }
 
 }
