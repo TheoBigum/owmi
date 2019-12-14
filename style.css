@@ -1,5 +1,7 @@
 * {
     margin: 0;
+    position: relative;
+    z-index: 2;
 }
 
 body {
@@ -129,16 +131,17 @@ p {
 /******************Designelementer***********************/
 
 .design_element_l {
-    height: 100vw;
+    height: 60vw;
     width: 20vw;
     background-image: url(assets/designElementer/SVG/designElementLyseroed.svg);
     background-size: contain;
     background-repeat: no-repeat;
+    grid-row: 2;
 }
 
 .design_element_o {
     height: 20vw;
-    width: 90vw;
+    width: 60vw;
     background-image: url(assets/designElementer/SVG/designElementOrange.svg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -153,6 +156,7 @@ p {
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0 auto;
+    grid-column: 2 span;
 
 }
 
@@ -195,7 +199,7 @@ nav {
 }
 
 #lp_baggrund {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -204,6 +208,12 @@ nav {
     background-size: cover;
     background-position: 80%;
     background-image: url(billederTilWeb/lp_baggrund.jpg);
+    z-index: 1;
+}
+
+#baggrund_bund {
+    background-image: url(billederTilWeb/baggrund.jpg);
+    z-index: 1;
 }
 
 #lp_content {
@@ -238,7 +248,7 @@ nav {
 
 #video_section {
     width: 100vw;
-    height: 150vw;
+    height: 250vw;
 }
 
 #video_section h2 {
@@ -246,46 +256,42 @@ nav {
 }
 
 #video_fs {
-    width: 100vw;
+    width: 90vw;
     height: 56.25vw;
     margin: 0 0 5vw 0;
 }
 
 #video_fs iframe {
-    width: 100vw;
-    height: 56.25vw;
+    width: 90vw;
+    height: 50.63vw;
+    grid-column: 1 span 2;
+    grid-row: 1;
 
 }
 
 #video_content_top {
     width: 90vw;
-    height: 75vw;
+    height: 145vw;
     display: grid;
     grid-template-columns: 70vw 20vw;
+    grid-template-rows: 65vw 65vw 20vw 60vw;
     margin: 0 5vw 0 5vw;
-
 }
 
 #video_menu {
     height: 60vw;
     width: 70vw;
     border: white solid 1px;
+    grid-row: 2;
 
-}
-
-#video_content_bund {
-    width: 90vw;
-    height: 80vw;
-    display: grid;
-    grid-template-rows: 20vw 60vw;
-    margin: 5vw;
-    /*    display: none;*/
 }
 
 #video_info {
     width: 90vw;
     height: 80vw;
     border: 1px solid white;
+    grid-row: 4;
+    grid-column: 1 span 2;
 }
 
 /******************NYHEDER***********************/
@@ -320,6 +326,10 @@ nav {
     height: 100vw;
     margin: 0 5vw 0 5vw;
 
+}
+
+#koncerter img {
+    display: none;
 }
 
 #koncert_info {
@@ -447,34 +457,6 @@ footer {
 
     /******************Designelementer***********************/
 
-    .design_element_l {
-        height: 100vw;
-        width: 20vw;
-        background-image: url(assets/designElementer/SVG/designElementLyseroed.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-
-    .design_element_o {
-        height: 20vw;
-        width: 90vw;
-        background-image: url(assets/designElementer/SVG/designElementOrange.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        margin: 0 auto;
-    }
-
-    .ikon_plus {
-        height: 12vw;
-        width: 12vw;
-        background-image: url(assets/designElementer/SVG/designElementPlus.svg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        margin: 0 auto;
-
-    }
-
     .soMe_ikon {
         width: 4vw;
         height: 4vw;
@@ -491,13 +473,8 @@ footer {
 
 }
 
-
 @media only screen and (min-width: 1000px) {
     /******************LANDING PAGE***********************/
-
-    * {
-        position: relative;
-    }
 
     #landingpage {
         width: 90vw;
@@ -507,7 +484,6 @@ footer {
     #lp_baggrund {
         background-position: left 50% top 0%;
         background-size: contain;
-        position: fixed;
     }
 
     #lp_content {
@@ -536,23 +512,210 @@ footer {
         height: 32vw;
         z-index: 100;
         position: relative;
+    }
+
+    /******************VIDEO SECTION***********************/
+
+    #video_section {
+        width: 100vw;
+        height: 80vw;
+    }
+
+    #video_fs iframe {
+        width: 50vw;
+        height: 28.13vw;
+        grid-row: 1;
+        grid-column: 2;
+        margin: 0 0 0 5vw;
+    }
+
+    #video_fs {
+        width: 50vw;
+        height: 28.13vw;
 
     }
+
+
+
+    #video_content_top {
+        width: 90vw;
+        height: 100vw;
+        display: grid;
+        grid-template-columns: 35vw 55vw;
+        grid-template-rows: 35vw 40vw;
+        margin: 0 5vw 0 5vw;
+    }
+
+
+    #video_menu {
+        height: 35vw;
+        width: 35vw;
+        border: white solid 1px;
+        grid-row: 1;
+        grid-column: 1;
+        margin: 0;
+    }
+
+    #video_info {
+        width: 50vw;
+        height: 20vw;
+        border: 1px solid white;
+        grid-row: 2;
+        grid-column: 1 span;
+        margin: 0 0 0 5vw;
+
+    }
+
+    /******************NYHEDER***********************/
+
+    #nyheder {
+        width: 90vw;
+        height: 45vw;
+        margin: 0 5vw 5vw 5vw;
+
+    }
+
+    .nyheder_col {
+        width: 90vw;
+        height: 45vw;
+        display: grid;
+        grid-template-columns: 45vw 45vw;
+        grid-template-rows: 5vw 40vw;
+    }
+
+    .nyheder_col_top {
+        width 45vw;
+        max-height: 40vw;
+        height: 40vw;
+        grid-column: 1;
+        grid-row: 2;
+
+    }
+
+    .nyhed_h4 {
+        grid-row: 1;
+        grid-column: 1 span 2;
+    }
+
+    .nyheder_col_bund {
+        width: 40vw;
+        height: 30vw;
+        margin: 0 0 0 5vw;
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    /******************KONCERTER***********************/
+
+    #koncerter {
+        width: 90vw;
+        height: 40vw;
+        margin: 0 5vw 0 5vw;
+        display: grid;
+        grid-template-rows: 10vw 30vw;
+        grid-template-columns: 45vw 45vw;
+
+    }
+
+    #koncerter img {
+        display: inherit;
+        width: 45vw;
+        height: 30vw;
+        grid-column: 1;
+        grid-row: 2;
+
+    }
+
+    #koncert_info {
+        width: 40vw;
+        height: 30vw;
+        border: 1px solid white;
+        grid-column: 2;
+        grid-row: 2;
+        margin: 0 0 0 5vw;
+    }
+
+
+    /******************OM***********************/
+
+    #ani_logo {
+        height: 15vh;
+    }
+
+    #om {
+        height: 150vw;
+
+    }
+
+    #om_content {
+        width: 90vw;
+        height: 110vw;
+        display: grid;
+        grid-template-rows: 55vw 5vw;
+    }
+
+    #om_content_top {
+        width: 50vw;
+        height: 50vw;
+        margin: 0 auto;
+        background-image: url(billederTilWeb/cover_album.jpg);
+        background-size: contain;
+        border: none;
+        grid-row: 2;
+    }
+
+    #om_content_bund {
+        width: 50vw;
+        height: 50vw;
+        margin: 0 auto;
+        border: 1px solid white;
+        grid-row: 1;
+    }
+
+    #lyt_knap {
+        width: 200px;
+        height: 50px;
+        margin: 2vw auto;
+        border: 1px solid white;
+        text-align: center;
+        line-height: 2rem;
+    }
+
+
+    /******************FOOTER***********************/
+
+    footer {
+        width: 100vw;
+        height: 20vw;
+    }
+
+    #footer_SoMe {
+        margin: 1vw auto;
+        width: 30vw;
+        height: 3vw;
+    }
+
+    #footer_info {
+        width: 30vw;
+    }
+
+
 
     /******************Designelementer***********************/
 
     .design_element_l {
-        height: 100vw;
-        width: 20vw;
-        background-image: url(assets/designElementer/SVG/designElementLyseroed.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
+        height: 30vw;
+        width: 10vw;
+        grid-column: 1;
+        grid-row: 2;
+        margin: 5vw auto;
+
 
     }
 
     .design_element_o {
-        height: 20vw;
-        width: 90vw;
+        height: 10vw;
+        width: 25vw;
         background-image: url(assets/designElementer/SVG/designElementOrange.svg);
         background-size: contain;
         background-repeat: no-repeat;
@@ -561,12 +724,7 @@ footer {
     }
 
     .ikon_plus {
-        height: 12vw;
-        width: 12vw;
-        background-image: url(assets/designElementer/SVG/designElementPlus.svg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        margin: 0 auto;
+        display: none;
 
     }
 
