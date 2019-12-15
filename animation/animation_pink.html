@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink</title>
+    <link rel="stylesheet" href="">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+        }
+
+        #pink {
+            height: 40vh;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: 1s fill ease forwards 2s;
+        }
+
+        #pink path {
+            stroke-dasharray: 2329;
+            stroke-dashoffset: 2329;
+            animation: line-ani 2.8s ease forwards;
+        }
+
+        @keyframes line-ani {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes fill {
+            from {
+                fill: transparent;
+            }
+
+            to {
+                fill: #F6C3FF;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <svg id="pink" width="134" height="729" viewBox="0 0 134 729" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 205.58L81 270L0 334.47L81 398.92L0 463.37L81 527.81L0 592.25L81 656.69L63.45 670.69L20.05 705.22C27.69 712.95 35.41 720.61 43.13 728.22C72.21 705.133 101.28 682.02 130.34 658.88C131.2 658.19 131.96 657.37 132.9 656.48L52.14 592.2L133.14 527.77L52.14 463.32L133.14 398.88L52.14 334.44L133.14 269.98L52.14 205.55L133.14 141.1L52.24 76.71L55.67 73.87C75.89 57.7233 96.1367 41.5633 116.41 25.39C117.378 24.6151 118.278 23.7586 119.1 22.83C111.513 15.2633 103.967 7.65333 96.46 0C96.34 0.08 96.22 0.16 96.11 0.25C65.01 24.9633 33.9267 49.6933 2.86 74.44C1.99 75.13 1.21 75.94 0.21 76.85C27.21 98.35 53.92 119.58 81 141.14L0 205.58Z" stroke="#F6C3FF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+
+    <script>
+        const logo = document.querySelectorAll('#pink path')
+
+        for (let i = 0; i < logo.length; i++) {
+            console.log(`Letter ${i} is ${logo[i].getTotalLength()}`)
+        }
+    </script>
+    </script>
+</body></html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orange</title>
+    <link rel="stylesheet" href="">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+        }
+
+
+        #orange {
+            height: 8vh;
+            width: 100%;
+            position: absolute;
+            top: 300%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+        }
+
+        #orange path {
+            /*
+            stroke-dasharray: 2293.6;
+            stroke-dashoffset: 2293.6;
+            animation: line-ani 2.8s ease forwards;
+*/
+        }
+
+        .startanimation {
+            stroke-dasharray: 2293.6;
+            stroke-dashoffset: 2293.6;
+            /*            animation: line-ani 2.8s ease forwards;*/
+            animation: line-ani 2.8s linear;
+
+        }
+
+        .fill-ani {
+            animation: 1s fill ease forwards 0s;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        @keyframes line-ani {
+            from {
+                opacity: 0;
+            }
+
+
+            to {
+                opacity: 1;
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes fill {
+
+            from {
+                fill: #fff;
+            }
+
+            to {
+                fill: #F09434;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <svg id="orange" width="729" height="134" viewBox="0 0 729 134" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M132.48 49.3065L71.4992 125.874C49.6301 98.4247 27.7967 70.9576 5.9991 43.4727C11.5037 37.8943 17.0396 32.3368 22.6069 26.8002C33.0841 39.9569 43.5586 53.1081 54.0302 66.2538L54.0337 66.2581C58.5933 71.9677 63.1419 77.6658 68.03 83.8034L71.5516 88.2253L75.0713 83.8018L135.999 7.22808L196.908 83.8013L200.43 88.2284L203.952 83.8016L264.87 7.2281L325.788 83.8016L329.31 88.2277L332.831 83.8018L393.759 7.22842L454.658 83.801L458.179 88.2288L461.702 83.8016L522.62 7.22773L583.549 83.8018L587.07 88.2274L590.591 83.8018L651.502 7.24857C675.075 36.8483 698.629 66.454 722.165 96.0658C716.592 101.539 711.044 107.037 705.521 112.56C694.711 99.1059 683.965 85.6138 673.211 72.111C668.094 65.6865 662.976 59.2595 657.847 52.8331L657.841 52.8248L657.834 52.8164C656.99 51.7689 656.148 50.7541 655.004 49.3761L654.963 49.3264L651.427 45.0654L647.979 49.3976L587.1 125.884C570.96 105.603 554.914 85.4312 538.722 65.0742C534.553 59.8329 530.374 54.5794 526.182 49.3087L522.66 44.8816L519.138 49.3084L458.22 125.882L397.291 49.3082L393.77 44.8823L390.248 49.3084L329.33 125.882L268.401 49.3082L264.88 44.8826L261.359 49.3082L200.431 125.882L139.522 49.3087L136.002 44.884L132.48 49.3065Z" stroke="#F09434" stroke-width="9" />
+    </svg>
+
+
+
+    <script>
+        const logo = document.querySelectorAll('#orange path')
+
+        for (let i = 0; i < logo.length; i++) {
+            console.log(`Letter ${i} is ${logo[i].getTotalLength()}`)
+        }
+
+        /*!
+         * Determine if an element is in the viewport
+         * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
+         * @param  {Node}    elem The element
+         * @return {Boolean}      Returns true if element is in the viewport
+         */
+        var isInViewport = function(elem) {
+            var distance = elem.getBoundingClientRect();
+            return (
+                distance.top >= 0 &&
+                distance.left >= 0 &&
+                distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                distance.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        };
+
+        var findMe = document.querySelector('#orange');
+
+        window.addEventListener('scroll', function(event) {
+            if (isInViewport(findMe)) {
+
+                document.querySelector("#orange").classList.add("startanimation");
+
+                document.querySelector("#orange").addEventListener("animationend", fill);
+
+            } else {
+                console.log('Nope...');
+            }
+        }, false);
+
+        function fill() {
+
+            document.querySelector("#orange").classList.add("fill-ani");
+
+        }
+    </script>
+</body></html>

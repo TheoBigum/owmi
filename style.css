@@ -57,7 +57,7 @@ H6 {
     font-family: 'Roboto', sans-serif;
     color: orange;
     font-size: 1rem;
-    margin: 1vw;
+    margin: 1vw 0 0 2vw;
 }
 
 H7 {
@@ -136,18 +136,18 @@ p {
 /******************Designelementer***********************/
 
 .design_element_l {
-    height: 60vw;
-    width: 10.96vw;
+    height: 70vw;
+    width: 12.44vw;
     background-image: url(assets/designElementer/SVG/designElementLyseroed.svg);
     background-size: contain;
     background-repeat: no-repeat;
     grid-row: 2;
-    margin: 0 auto;
+    margin: 0 0 0 6vw;
 }
 
 .design_element_o {
-    height: 10.96vw;
-    width: 60vw;
+    height: 12.44vw;
+    width: 70vw;
     background-image: url(assets/designElementer/SVG/designElementOrange.svg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -191,8 +191,8 @@ nav {
     width: 12vh;
     height: 12vh;
     position: relative;
-    top: 1vw;
-    left: 25vw;
+    top: 2vw;
+    left: 27vw;
     z-index: 1;
 }
 
@@ -247,7 +247,7 @@ nav {
 
 #lp_owmi {
     background: none;
-    margin: 5vw 10vw;
+    margin: 5vw 10vw 20vw 10vw;
     width: 80vw;
     height: 43vw;
 }
