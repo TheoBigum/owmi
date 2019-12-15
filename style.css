@@ -1,13 +1,12 @@
 * {
     margin: 0;
+    position: relative;
+    z-index: 2;
 }
 
 body {
     box-sizing: border-box;
-    background-image: url(billederTilWeb/baggrund.jpg);
     background-size: contain;
-    height: 1200vw;
-
 }
 
 img {
@@ -17,7 +16,7 @@ img {
 h1 {
     font-family: 'Roboto', sans-serif;
     color: white;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 h2 {
@@ -37,6 +36,7 @@ h4 {
     color: white;
     font-size: 1.5rem;
     letter-spacing: 1.5px;
+    margin: 1vw 0;
 }
 
 h5 {
@@ -50,6 +50,13 @@ H6 {
     color: orange;
     font-size: 1rem;
     margin: 5px;
+}
+
+H7 {
+    font-family: 'courier prime', monospace;
+    color: white;
+    font-size: 1.5rem;
+
 }
 
 p {
@@ -121,16 +128,17 @@ p {
 /******************Designelementer***********************/
 
 .design_element_l {
-    height: 100vw;
-    width: 20vw;
+    height: 60vw;
+    width: 10.96vw;
     background-image: url(assets/designElementer/SVG/designElementLyseroed.svg);
     background-size: contain;
     background-repeat: no-repeat;
+    grid-row: 2;
 }
 
 .design_element_o {
-    height: 20vw;
-    width: 90vw;
+    height: 10.96vw;
+    width: 60vw;
     background-image: url(assets/designElementer/SVG/designElementOrange.svg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -145,12 +153,13 @@ p {
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0 auto;
+    grid-column: 2 span;
 
 }
 
 .soMe_ikon {
-    width: 5vw;
-    height: 5vw;
+    width: 7vw;
+    height: 7vw;
 }
 
 /******************HEADER***********************/
@@ -170,11 +179,11 @@ nav {
 }
 
 #logo {
-    width: 20vw;
-    height: 20vw;
+    width: 12vh;
+    height: 12vh;
     position: relative;
-    top: 0;
-    left: 30vw;
+    top: 1vw;
+    left: 25vw;
     z-index: 1;
 }
 
@@ -183,11 +192,11 @@ nav {
 
 #landingpage {
     width: 90vw;
-    height: 200vw;
+    height: 80vh;
 }
 
 #lp_baggrund {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -196,29 +205,39 @@ nav {
     background-size: cover;
     background-position: 80%;
     background-image: url(billederTilWeb/lp_baggrund.jpg);
+    z-index: 1;
+}
+
+#baggrund_bund {
+    background-image: url(billederTilWeb/nybg.jpg);
+    z-index: 1;
+    background-size: cover;
+    border-top: 2px solid white;
 }
 
 #lp_content {
-    margin: 55vw 20vw 0 20vw;
-    width: 60vw;
-    height: 50vw;
+    margin: 25vh 15vw 0 15vw;
+    width: 70vw;
+    height: 55vh;
 }
 
 #lp_content img {
-    width: 40vw;
-    height: 40vw;
+    width: 50vw;
+    height: 50vw;
+    margin: 2vw 0 0 3vw;
 }
 
 #lp_SoMe {
-    margin: 13vw 25vw;
-    width: 50vw;
-    height: 5vw;
+    margin: 10vw 15vw;
+    width: 70vw;
+    height: 7vw;
     display: grid;
     grid-template-columns: 5vw 5vw 5vw 5vw 5vw;
     justify-content: space-around;
 }
 
 #lp_owmi {
+    background: none;
     margin: 10vw 10vw;
     width: 80vw;
     height: 43vw;
@@ -228,64 +247,64 @@ nav {
 
 #video_section {
     width: 100vw;
-    height: 150vw;
+    height: 250vw;
+}
+
+#video_section h2 {
+    margin: 0 0 0 5vw;
 }
 
 #video_fs {
-    width: 100vw;
+    width: 90vw;
     height: 56.25vw;
     margin: 0 0 5vw 0;
 }
 
 #video_fs iframe {
-    width: 100vw;
-    height: 56.25vw;
+    width: 90vw;
+    height: 50.63vw;
+    grid-column: 1 span 2;
+    grid-row: 1;
 
 }
 
 #video_content_top {
     width: 90vw;
-    height: 75vw;
+    height: 145vw;
     display: grid;
     grid-template-columns: 70vw 20vw;
+    grid-template-rows: 65vw 65vw 20vw 60vw;
     margin: 0 5vw 0 5vw;
-
 }
 
 #video_menu {
     height: 60vw;
     width: 70vw;
     border: white solid 1px;
+    grid-row: 2;
 
-}
-
-#video_content_bund {
-    width: 90vw;
-    height: 80vw;
-    display: grid;
-    grid-template-rows: 20vw 60vw;
-    margin: 5vw;
-    /*    display: none;*/
 }
 
 #video_info {
     width: 90vw;
     height: 80vw;
     border: 1px solid white;
+    grid-row: 4;
+    grid-column: 1 span 2;
 }
 
 /******************NYHEDER***********************/
 
 #nyheder {
     width: 90vw;
-    height: 210vw;
-    margin: 0 5vw 0 5vw;
+    height: 220vw;
+    margin: 0 5vw 5vw 5vw;
 
 }
 
 .nyheder_col {
     width: 90vwvw;
-    height: 100vw;
+    height: 110vw;
 }
 
 .nyheder_col_top {
@@ -296,7 +315,6 @@ nav {
 .nyheder_col_bund {
     width: 90vw;
     height: 30vw;
-    border: 1px solid white;
 }
 
 /******************KONCERTER***********************/
@@ -306,6 +324,10 @@ nav {
     height: 100vw;
     margin: 0 5vw 0 5vw;
 
+}
+
+#koncerter img {
+    display: none;
 }
 
 #koncert_info {
@@ -320,7 +342,7 @@ nav {
     height: 10vh;
     width: 90vw;
     animation: 1s fill ease forwards 3s;
-    margin: 0 auto;
+    margin: 5vw auto;
 }
 
 #om {
@@ -352,10 +374,10 @@ nav {
 #lyt_knap {
     width: 200px;
     height: 50px;
-    margin: 0 auto;
+    margin: 2vw auto;
     border: 1px solid white;
     text-align: center;
-    line-height: 3rem;
+    line-height: 2rem;
 }
 
 /******************FOOTER***********************/
@@ -366,8 +388,8 @@ footer {
 }
 
 #footer_SoMe {
-    margin: 13vw 25vw;
-    width: 50vw;
+    margin: 13vw 20vw;
+    width: 60vw;
     height: 5vw;
     display: grid;
     grid-template-columns: 5vw 5vw 5vw 5vw 5vw;
@@ -378,4 +400,405 @@ footer {
     width: 40vw;
     margin: 0 auto;
     text-align: center;
+}
+
+@media only screen and (min-width: 700px) {
+
+    h1 {
+        font-size: 4rem;
+
+    }
+
+    h2 {
+        font-size: 4rem;
+        margin: 0;
+    }
+
+    h3 {
+        font-size: 3rem;
+    }
+
+    h4 {}
+
+    h5 {}
+
+    H6 {}
+
+    H7 {
+
+        font-size: 2rem;
+
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    /*******************LANDING PAGE*****************/
+
+    #landingpage {}
+
+    #lp_baggrund {}
+
+    #lp_content {}
+
+    #lp_content img {}
+
+    #lp_SoMe {
+        width: 40vw;
+        margin-left: 30vw;
+    }
+
+    #lp_owmi {
+        margin: 15vw 10vw;
+    }
+
+    /******************Designelementer***********************/
+
+    .soMe_ikon {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    /******************FOOTER***********************/
+
+    footer {}
+
+    #footer_SoMe {
+        margin: 13vw 30vw;
+        width: 40vw;
+        grid-template-columns: 2vw 2vw 2vw 2vw 2vw;
+
+    }
+
+}
+
+@media only screen and (min-width: 1000px) {
+
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 7rem;
+        margin: 2.5vw 0;
+
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+        letter-spacing: 1.5px;
+        margin: 1vw 0;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+    H6 {
+        font-size: 1rem;
+        margin: 5px;
+    }
+
+    H7 {
+        font-size: 1.5rem;
+
+    }
+
+    p {
+        font-family: 'Courier Prime', monospace;
+        color: white;
+        font-size: 1rem;
+    }
+
+
+    /******************LANDING PAGE***********************/
+
+    #landingpage {
+        width: 90vw;
+        height: 40vh;
+    }
+
+    #lp_baggrund {
+        background-position: left 50% top 0%;
+        background-size: contain;
+        height: 100vw;
+
+    }
+
+    #lp_content {
+        margin: 0 55vw 0 15vw;
+        width: 30vw;
+        height: 55vh;
+        position: relative;
+
+    }
+
+    #lp_content img {
+        width: 300px;
+        height: 300px;
+        margin: 0;
+    }
+
+    #lp_SoMe {
+        margin: 20vh 0 0 16vw;
+        width: 300px;
+        position: relative;
+    }
+
+    #lp_owmi {
+        margin: 30vw 20vw;
+        width: 60vw;
+        height: 32vw;
+        z-index: 100;
+        position: relative;
+    }
+
+    /******************VIDEO SECTION***********************/
+
+    #video_section {
+        width: 100vw;
+        height: 80vw;
+    }
+
+    #video_fs iframe {
+        width: 50vw;
+        height: 28.13vw;
+        grid-row: 1;
+        grid-column: 2;
+        margin: 0 0 0 5vw;
+    }
+
+    #video_fs {
+        width: 50vw;
+        height: 28.13vw;
+
+    }
+
+
+
+    #video_content_top {
+        width: 90vw;
+        height: 100vw;
+        display: grid;
+        grid-template-columns: 35vw 55vw;
+        grid-template-rows: 35vw 40vw;
+        margin: 0 5vw 0 5vw;
+    }
+
+
+    #video_menu {
+        height: 35vw;
+        width: 35vw;
+        border: white solid 1px;
+        grid-row: 1;
+        grid-column: 1;
+        margin: 0;
+    }
+
+    #video_info {
+        width: 50vw;
+        height: 20vw;
+        border: 1px solid white;
+        grid-row: 2;
+        grid-column: 1 span;
+        margin: 0 0 0 5vw;
+
+    }
+
+    /******************NYHEDER***********************/
+
+    #nyheder {
+        width: 90vw;
+        height: 45vw;
+        margin: 0 5vw 5vw 5vw;
+
+    }
+
+    .nyheder_col {
+        width: 90vw;
+        height: 45vw;
+        display: grid;
+        grid-template-columns: 45vw 45vw;
+        grid-template-rows: 5vw 40vw;
+    }
+
+    .nyheder_col_top {
+        width 45vw;
+        max-height: 40vw;
+        height: 40vw;
+        grid-column: 1;
+        grid-row: 2;
+
+    }
+
+    .nyhed_h4 {
+        grid-row: 1;
+        grid-column: 1 span 2;
+    }
+
+    .nyheder_col_bund {
+        width: 40vw;
+        height: 30vw;
+        margin: 0 0 0 5vw;
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    /******************KONCERTER***********************/
+
+    #koncerter {
+        width: 90vw;
+        height: 45vw;
+        margin: 0 5vw 0 5vw;
+        display: grid;
+        grid-template-rows: 15vw 30vw;
+        grid-template-columns: 45vw 45vw;
+
+    }
+
+    #koncerter img {
+        display: inherit;
+        width: 45vw;
+        height: 30vw;
+        grid-column: 1;
+        grid-row: 2;
+
+    }
+
+    #koncert_info {
+        width: 40vw;
+        height: 30vw;
+        border: 1px solid white;
+        grid-column: 2;
+        grid-row: 2;
+        margin: 0 0 0 5vw;
+    }
+
+
+    /******************OM***********************/
+
+    #ani_logo {
+        height: 15vh;
+    }
+
+    #om {
+        height: 145vw;
+
+    }
+
+    #om_content {
+        width: 90vw;
+        height: 110vw;
+        display: grid;
+        grid-template-rows: 55vw 5vw;
+    }
+
+    #om_content_top {
+        width: 50vw;
+        height: 50vw;
+        margin: 0 auto;
+        background-image: url(billederTilWeb/cover_album.jpg);
+        background-size: contain;
+        border: none;
+        grid-row: 2;
+    }
+
+    #om_content_bund {
+        width: 50vw;
+        height: 50vw;
+        margin: 0 auto;
+        border: 1px solid white;
+        grid-row: 1;
+    }
+
+    #lyt_knap {
+        width: 200px;
+        height: 50px;
+        margin: 0 auto;
+        border: 1px solid white;
+        text-align: center;
+        line-height: 2rem;
+    }
+
+
+    /******************FOOTER***********************/
+
+    footer {
+        width: 100vw;
+        height: 12vw;
+        display: grid;
+        grid-template-columns: 70vw 30vw;
+    }
+
+    #footer_SoMe {
+        margin: 5vw 0 0 5vw;
+        width: 25vw;
+        height: 3vw;
+        grid-template-columns: 2vw 2vw 2vw 2vw 2vw;
+    }
+
+    #footer_info {
+        margin: 5vw 0 0 0;
+        width: 30vw;
+    }
+
+
+
+    /******************Designelementer***********************/
+
+    .design_element_l {
+        height: 30vw;
+        width: 5.48vw;
+        grid-column: 1;
+        grid-row: 2;
+        margin: 5vw auto;
+    }
+
+    .design_element_o {
+        height: 5.48vw;
+        width: 30vw;
+        margin: 0 auto 5vw;
+    }
+
+    .ikon_plus {
+        display: none;
+
+    }
+
+    .soMe_ikon {
+        width: 2vw;
+        height: 2vw;
+    }
+
+    /******************HEADER***********************/
+
+    header {
+        display: grid;
+        grid-template-columns: 50vw 50vw;
+        ;
+    }
+
+    nav {
+        color: wheat;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+
+    }
+
+    #logo {
+        width: 15vh;
+        height: 15vh;
+        position: relative;
+        top: 1vw;
+        left: 35vw;
+        z-index: 1;
+    }
+
 }

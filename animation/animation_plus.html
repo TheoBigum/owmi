@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink</title>
+    <link rel="stylesheet" href="">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+        }
+
+        #plus {
+            height: 40vh;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: 1s fill ease forwards 2s;
+        }
+
+        #plus path {
+            stroke-dasharray: 767.9;
+            stroke-dashoffset: 767.9;
+            animation: line-ani 2.3s ease forwards;
+        }
+
+        @keyframes line-ani {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes fill {
+            from {
+                fill: transparent;
+            }
+
+            to {
+                fill: white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <svg id="plus" width="195" height="208" viewBox="0 0 195 208" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M119.918 76.8282V81.3282H124.418H190.426V123.305H124.418H119.918V127.805V202.992H75.2071V127.805V123.305H70.7071H4.50401V81.3282H70.7071H75.2071V76.8282V4.96104H119.918V76.8282Z" stroke="white" stroke-width="9" />
+    </svg>
+
+
+    <script>
+        const logo = document.querySelectorAll('#plus path')
+
+        for (let i = 0; i < logo.length; i++) {
+            console.log(`Letter ${i} is ${logo[i].getTotalLength()}`)
+        }
+    </script>
+    </script>
+</body></html>
