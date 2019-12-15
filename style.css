@@ -13,6 +13,10 @@ img {
     width: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+
 h1 {
     font-family: 'Roboto', sans-serif;
     color: white;
@@ -200,10 +204,10 @@ nav {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 110vw;
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 80%;
+    background-position: 73%;
     background-image: url(billederTilWeb/lp_baggrund.jpg);
     z-index: 1;
 }
@@ -216,7 +220,7 @@ nav {
 }
 
 #lp_content {
-    margin: 25vh 15vw 0 15vw;
+    margin: 15vh 15vw 0 15vw;
     width: 70vw;
     height: 55vh;
 }
@@ -360,6 +364,8 @@ nav {
 }
 
 #om_content_top {
+    background-image: url(billederTilWeb/cover_album.jpg);
+    background-size: cover;
     width: 90vw;
     height: 100vw;
     border: 1px solid white;
@@ -375,9 +381,12 @@ nav {
     width: 200px;
     height: 50px;
     margin: 2vw auto;
-    border: 1px solid white;
     text-align: center;
     line-height: 2rem;
+}
+
+#lyt_knap:hover h4 {
+    color: orange;
 }
 
 /******************FOOTER***********************/
@@ -493,7 +502,7 @@ footer {
     h4 {
         font-size: 1.5rem;
         letter-spacing: 1.5px;
-        margin: 1vw 0;
+        margin: 0;
     }
 
     h5 {
@@ -521,7 +530,7 @@ footer {
 
     #landingpage {
         width: 90vw;
-        height: 40vh;
+        height: 70vh;
     }
 
     #lp_baggrund {
@@ -532,7 +541,7 @@ footer {
     }
 
     #lp_content {
-        margin: 0 55vw 0 15vw;
+        margin: 8vw 55vw 0 15vw;
         width: 30vw;
         height: 55vh;
         position: relative;
@@ -552,10 +561,10 @@ footer {
     }
 
     #lp_owmi {
-        margin: 30vw 20vw;
+        margin: 10vw 20vw;
         width: 60vw;
         height: 32vw;
-        z-index: 100;
+        z-index: 2;
         position: relative;
     }
 
@@ -563,7 +572,7 @@ footer {
 
     #video_section {
         width: 100vw;
-        height: 80vw;
+        height: 60vw;
     }
 
     #video_fs iframe {
@@ -584,16 +593,16 @@ footer {
 
     #video_content_top {
         width: 90vw;
-        height: 100vw;
+        height: 70vw;
         display: grid;
         grid-template-columns: 35vw 55vw;
-        grid-template-rows: 35vw 40vw;
+        grid-template-rows: 30vw 40vw;
         margin: 0 5vw 0 5vw;
     }
 
 
     #video_menu {
-        height: 35vw;
+        height: 30vw;
         width: 35vw;
         border: white solid 1px;
         grid-row: 1;
@@ -602,12 +611,12 @@ footer {
     }
 
     #video_info {
-        width: 50vw;
-        height: 20vw;
+        width: 70vw;
+        height: 15vw;
         border: 1px solid white;
         grid-row: 2;
-        grid-column: 1 span;
-        margin: 0 0 0 5vw;
+        grid-column: 1 / 2;
+        margin: 2vw 10vw 0 10vw;
 
     }
 
@@ -615,7 +624,7 @@ footer {
 
     #nyheder {
         width: 90vw;
-        height: 45vw;
+        height: 40vw;
         margin: 0 5vw 5vw 5vw;
 
     }
@@ -625,7 +634,7 @@ footer {
         height: 45vw;
         display: grid;
         grid-template-columns: 45vw 45vw;
-        grid-template-rows: 5vw 40vw;
+        grid-template-rows: 40vw;
     }
 
     .nyheder_col_top {
@@ -633,31 +642,33 @@ footer {
         max-height: 40vw;
         height: 40vw;
         grid-column: 1;
-        grid-row: 2;
+        grid-row: 1;
 
     }
 
     .nyhed_h4 {
+        font-size: 2.5rem;
         grid-row: 1;
-        grid-column: 1 span 2;
+        grid-column: 2;
+        margin: 0 0 0 5vw;
     }
 
     .nyheder_col_bund {
         width: 40vw;
         height: 30vw;
-        margin: 0 0 0 5vw;
+        margin: 5vw 0 0 5vw;
         grid-column: 2;
-        grid-row: 2;
+        grid-row: 1;
     }
 
     /******************KONCERTER***********************/
 
     #koncerter {
         width: 90vw;
-        height: 45vw;
+        height: 35vw;
         margin: 0 5vw 0 5vw;
         display: grid;
-        grid-template-rows: 15vw 30vw;
+        grid-template-rows: 30vww;
         grid-template-columns: 45vw 45vw;
 
     }
@@ -667,17 +678,24 @@ footer {
         width: 45vw;
         height: 30vw;
         grid-column: 1;
-        grid-row: 2;
+        grid-row: 1;
 
+    }
+
+    #koncerter h4 {
+        grid-row: 1;
+        grid-column: 2;
+        font-size: 2.5rem;
+        margin: 0 0 0 5vw;
     }
 
     #koncert_info {
         width: 40vw;
-        height: 30vw;
+        height: 25vw;
         border: 1px solid white;
         grid-column: 2;
-        grid-row: 2;
-        margin: 0 0 0 5vw;
+        grid-row: 1;
+        margin: 5vw 0 0 5vw;
     }
 
 
@@ -703,8 +721,6 @@ footer {
         width: 50vw;
         height: 50vw;
         margin: 0 auto;
-        background-image: url(billederTilWeb/cover_album.jpg);
-        background-size: contain;
         border: none;
         grid-row: 2;
     }
@@ -717,14 +733,7 @@ footer {
         grid-row: 1;
     }
 
-    #lyt_knap {
-        width: 200px;
-        height: 50px;
-        margin: 0 auto;
-        border: 1px solid white;
-        text-align: center;
-        line-height: 2rem;
-    }
+    #lyt_knap {}
 
 
     /******************FOOTER***********************/
@@ -755,9 +764,16 @@ footer {
     .design_element_l {
         height: 30vw;
         width: 5.48vw;
+        position: absolute;
+        top: 5vw;
+        left: 83vw;
+        /*
+        height: 30vw;
+        width: 5.48vw;
         grid-column: 1;
         grid-row: 2;
         margin: 5vw auto;
+*/
     }
 
     .design_element_o {
@@ -779,25 +795,27 @@ footer {
     /******************HEADER***********************/
 
     header {
-        display: grid;
-        grid-template-columns: 50vw 50vw;
-        ;
+        z-index: 3;
     }
 
     nav {
-        color: wheat;
-        position: relative;
+        margin: 2vw 0 0 2vw;
+        position: fixed;
         overflow: hidden;
-        z-index: 1;
+        z-index: 3;
 
+    }
+
+    a:hover h6 {
+        color: white;
     }
 
     #logo {
         width: 15vh;
         height: 15vh;
-        position: relative;
+        position: absolute;
         top: 1vw;
-        left: 35vw;
+        left: 85vw;
         z-index: 1;
     }
 
