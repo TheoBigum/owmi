@@ -5,10 +5,10 @@
  const forside_dest = document.querySelector("#forside");
  const forside_temp = document.querySelector("#forside_temp");
 
- // let videoer = [];
+ let videoer = [];
  // const videoer_dest = document.querySelector("#");
  // const videoer_temp = document.querySelector("#videoer_temp");
- //
+
  let koncerter = [];
  const koncerter_dest = document.querySelector("#koncerter");
  const koncerter_temp = document.querySelector("#koncerter_temp");
@@ -27,8 +27,8 @@
      let forside_jsonData = await fetch("http://theobigum.com/owmiWP/wordpress/wp-json/wp/v2/forside");
      forside = await forside_jsonData.json();
 
-     //     let videoer_jsonData = await fetch("http://theobigum.com/owmiWP/wordpress/wp-json/wp/v2/videoer");
-     //     videoer = await videoer_jsonData.json();
+     let videoer_jsonData = await fetch("http://theobigum.com/owmiWP/wordpress/wp-json/wp/v2/videoer");
+     videoer = await videoer_jsonData.json();
 
      let koncerter_jsonData = await fetch("http://theobigum.com/owmiWP/wordpress/wp-json/wp/v2/koncerter");
      koncerter = await koncerter_jsonData.json();
@@ -74,7 +74,7 @@
      console.log("visKoncerter")
      koncerter.forEach(koncert => {
          const klon = koncerter_temp.cloneNode(true).content;
-         klon.querySelector(".koncert_img").src = koncert.koncert_billede.guid;
+         klon.querySelector(".koncert_img").src = koncert.koncerter_billede.guid;
          klon.querySelector(".koncert_h4").textContent = koncert.title.rendered;
          klon.querySelector(".koncert_p").textContent = koncert.koncert_text;
          klon.querySelector(".koncert_p2").innerHTML = koncert.content.rendered;
@@ -91,7 +91,7 @@
      nyheder.forEach(nyhed => {
          const klon = nyhed_temp.cloneNode(true).content;
          klon.querySelector(".nyhed_h4").textContent = nyhed.title.rendered
-         klon.querySelector(".nyhed_img").src = nyhed.koncert_billede.guid;
+         klon.querySelector(".nyhed_img").src = nyhed.nyhed_billede.guid;
          klon.querySelector(".nyhed_p").innerHTML = nyhed.content.rendered;
          nyhed_dest.appendChild(klon);
 
