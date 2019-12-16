@@ -29,26 +29,31 @@
         <img id="logo" src="assets/designElementer/owmiLogo.png" alt="">
     </header>
 
-    <template id="forside_temp">
-        <article id="lp_content">
-            <h3 class="forside_h3"></h3>
-            <h5 class="forside_h5"></h5>
-            <img class="forside_img">
-        </article>
-    </template>
-    <section id="forside"></section>
+
+
 
     <div id="lp_baggrund"> </div>
 
 
 
     <section id="landingpage">
+        <section id="forside"></section>
 
+        <template id="forside_temp">
+            <article id="lp_content">
+                <h3 class="forside_h3"></h3>
+                <h5 class="forside_h5"></h5>
+                <img class="forside_img">
+            </article>
+        </template>
+
+        <!--
         <div id="lp_content">
             <h1>Tourner</h1>
             <h7>Debutalbum ude nu</h7>
             <img src="billederTilWeb/cover_album.jpg" alt="Debutalbum cover">
         </div>
+-->
 
         <div id="lp_SoMe">
             <img class="soMe_ikon" src="assets/SoMe/facebook.svg" alt="">
@@ -128,9 +133,15 @@
 
 
         <section id="koncerter">
-            <img src="billederTilWeb/nyheder_1.jpg" alt="">
             <H4>KONCERTER</H4>
-            <div id="koncert_info"></div>
+            <template id="koncerter_temp">
+                <img class="koncert_img">
+                <h4 class="koncert_h4"></h4>
+                <div id="koncert_info">
+                    <p class="koncert_p"></p>
+                    <p class="koncert_p2"></p>
+                </div>
+            </template>
         </section>
 
         <section id="om">
