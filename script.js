@@ -74,8 +74,6 @@
              console.log(videoer);
              const klon = skabelon.cloneNode(true).content;
 
-             //  Billederne ligger i et array, og vi benytter os da af [0], for at vise det første billede i arrayet
-
              klon.querySelector("#video_fs").src = video.video;
              klon.querySelector("#video_info").innerHTML = video.content.rendered;
 
