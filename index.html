@@ -276,58 +276,7 @@
 
             visVideoer();
         }
-
-        document.addEventListener("DOMContentLoaded", hentJson);
-
-        const url = "https://theobigum.com/owmiWP/wordpress/wp-json/wp/v2/videoer";
-        let filter = "alle";
-
-        async function hentJson() {
-            const response = await fetch(url);
-            const video = await response.json();
-            vis(video);
-            knapperDerNapper();
-        }
-
-
-        function knapperDerNapper() {
-            document.querySelectorAll(".filter").forEach(elm => {
-                elm.addEventListener("click", filtrering);
-            })
-        }
-
-        function filtrering() {
-            filter = this.dataset.kategori;
-
-            document.querySelectorAll(".filter").forEach(elm => {
-                elm.classList.remove("filter_valgt");
-            })
-
-            this.classlist.add("filter_valgt");
-
-            vis(video);
-
-        }
-
-
-        function vis(video) {
-
-            if (filter == "alle" || filter == video.kategori) {
-                console.log(video);
-
-                document.querySelector("#video_info").innerHTML = video[0].content.rendered;
-                document.querySelector("#video_fs").src = video[0].video;
-            };
-        }
-        const logo = document.querySelectorAll('#ani_logo path')
-
-        for (let i = 0; i < logo.length; i++) {
-            console.log(`Letter ${i} is ${logo[i].getTotalLength()}`)
-        }
-
     </script>
-    <script src="script.js"></script>
+    <!--    <script src="script.js"></script>-->
 
-</body>
-
-</html>
+</body></html>

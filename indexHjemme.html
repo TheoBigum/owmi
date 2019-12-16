@@ -204,22 +204,6 @@
     </section>
 
     <script>
-        document.addEventListener("DOMContentLoaded", hentJson);
-
-        const url = "https://theobigum.com/owmiWP/wordpress/wp-json/wp/v2/videoer";
-
-        async function hentJson() {
-            const response = await fetch(url);
-            const video = await response.json();
-            vis(video);
-        }
-
-        function vis(video) {
-
-            document.querySelector("#video_info").innerHTML = video[0].content.rendered;
-            document.querySelector("#video_fs").src = video[0].video;
-        };
-
         //    cykel.billeder.forEach(b => {});
 
         const logo = document.querySelectorAll('#orange path')
