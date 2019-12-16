@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owmi</title>
+    <link rel="stylesheet" href="stylehjemme.css">
+    <link href="https://fonts.googleapis.com/css?family=Courier+Prime|Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#video_section">
+                <h6>VIDEOER</h6>
+            </a>
+            <a href="#nyheder">
+                <h6>NYHEDER</h6>
+            </a>
+            <a href="#koncerter">
+                <h6>KONCERTER</h6>
+            </a>
+            <a href="#om">
+                <h6>OM</h6>
+            </a>
+        </nav>
+        <img id="logo" src="assets/designElementer/owmiLogo.png" alt="">
+    </header>
+
+    <template id="forside_temp">
+        <article id="lp_content">
+            <h3 class="forside_h3"></h3>
+            <h5 class="forside_h5"></h5>
+            <img class="forside_img">
+        </article>
+    </template>
+    <section id="forside"></section>
+
+    <div id="lp_baggrund"> </div>
+
+
+
+    <section id="landingpage">
+
+        <div id="lp_content">
+            <h1>Tourner</h1>
+            <h7>Debutalbum ude nu</h7>
+            <img src="billederTilWeb/cover_album.jpg" alt="Debutalbum cover">
+        </div>
+
+        <div id="lp_SoMe">
+            <img class="soMe_ikon" src="assets/SoMe/facebook.svg" alt="">
+
+            <img class="soMe_ikon" src="assets/SoMe/instagram%2016.39.32.svg" alt="">
+
+            <img class="soMe_ikon" src="assets/SoMe/spotify%2016.39.32.svg" alt="">
+
+            <img class="soMe_ikon" src="assets/SoMe/youtube%2016.39.32.svg" alt="">
+
+            <img class="soMe_ikon" src="assets/SoMe/email%2016.39.32.svg" alt="">
+
+        </div>
+    </section>
+
+    <div id="lp_owmi">
+        <img src="billederTilWeb/owmiart.png" alt="Illustration som skriver OWMI">
+    </div>
+
+    <section id="baggrund_bund">
+
+
+
+        <section id="video_section">
+            <h2>VIDEOER</h2>
+            <div id="video_content_top">
+                <div id="video_fs">
+                    <iframe src="https://www.youtube.com/embed/aYGV8JSxVDE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div id="video_menu"></div>
+                <svg id="pink" class="hide" width="134" height="729" viewBox="0 0 134 729" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 205.58L81 270L0 334.47L81 398.92L0 463.37L81 527.81L0 592.25L81 656.69L63.45 670.69L20.05 705.22C27.69 712.95 35.41 720.61 43.13 728.22C72.21 705.133 101.28 682.02 130.34 658.88C131.2 658.19 131.96 657.37 132.9 656.48L52.14 592.2L133.14 527.77L52.14 463.32L133.14 398.88L52.14 334.44L133.14 269.98L52.14 205.55L133.14 141.1L52.24 76.71L55.67 73.87C75.89 57.7233 96.1367 41.5633 116.41 25.39C117.378 24.6151 118.278 23.7586 119.1 22.83C111.513 15.2633 103.967 7.65333 96.46 0C96.34 0.08 96.22 0.16 96.11 0.25C65.01 24.9633 33.9267 49.6933 2.86 74.44C1.99 75.13 1.21 75.94 0.21 76.85C27.21 98.35 53.92 119.58 81 141.14L0 205.58Z" stroke="#F6C3FF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <svg id="plus" width="195" height="208" viewBox="0 0 195 208" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M119.918 76.8282V81.3282H124.418H190.426V123.305H124.418H119.918V127.805V202.992H75.2071V127.805V123.305H70.7071H4.50401V81.3282H70.7071H75.2071V76.8282V4.96104H119.918V76.8282Z" stroke="white" stroke-width="9" />
+                </svg>
+                <div id="video_info"></div>
+            </div>
+        </section>
+
+        <section id="nyheder">
+            <h2>NYHEDER</h2>
+
+            <template id="nyhed_temp">
+                <article class="nyheder_col">
+                    <h4 class="nyhed_h4"></h4>
+                    <div class="nyheder_col_top">
+                        <img class="nyhed_img">
+                    </div>
+                    <div class="nyheder_col_bund">
+                        <p class="nyhed_p"></p>
+                    </div>
+                </article>
+            </template>
+
+
+
+            <!--
+        <div class="nyheder_col">
+            <h4>OVERSKRIFT</h4>
+            <div class="nyheder_col_top">
+                <img src="billederTilWeb/nyheder_1.jpg" alt="">
+            </div>
+            <div class="nyheder_col_bund">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque officiis itaque quasi possimus fugit ratione voluptatibus in inventore distinctio veniam, labore qui pariatur, ut obcaecati architecto iure similique laboriosam a.</p>
+            </div>
+        </div>
+-->
+
+            <!--
+        <template id="nyheder_temp">
+            <h4></h4>
+            <img>
+            <p></p>
+        </template>
+-->
+
+        </section>
+
+        <!--        <div class="design_element_o"></div>-->
+
+
+        <section id="koncerter">
+            <img src="billederTilWeb/nyheder_1.jpg" alt="">
+            <H4>KONCERTER</H4>
+            <div id="koncert_info"></div>
+        </section>
+
+        <section id="om">
+            <svg id="ani_logo" class="" width="1347" height="228" viewBox="0 0 1347 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                <path d="M178.59 43.3145H113.258V221H69.3125V43.3145H4.85938V7.71875H178.59V43.3145Z" stroke="orange" stroke-width="8" mask="url(#path-1-outside-1)" />
+                <path d="M374.879 119.193C374.879 140.189 371.168 158.598 363.746 174.418C356.324 190.238 345.68 202.445 331.812 211.039C318.043 219.633 302.223 223.93 284.352 223.93C266.676 223.93 250.904 219.682 237.037 211.186C223.17 202.689 212.428 190.58 204.811 174.857C197.193 159.037 193.336 140.873 193.238 120.365V109.818C193.238 88.8223 196.998 70.3652 204.518 54.4473C212.135 38.4316 222.828 26.1758 236.598 17.6797C250.465 9.08594 266.285 4.78906 284.059 4.78906C301.832 4.78906 317.604 9.08594 331.373 17.6797C345.24 26.1758 355.934 38.4316 363.453 54.4473C371.07 70.3652 374.879 88.7734 374.879 109.672V119.193ZM330.348 109.525C330.348 87.1621 326.344 70.1699 318.336 58.5488C310.328 46.9277 298.902 41.1172 284.059 41.1172C269.312 41.1172 257.936 46.8789 249.928 58.4023C241.92 69.8281 237.867 86.625 237.77 108.793V119.193C237.77 140.971 241.773 157.865 249.781 169.877C257.789 181.889 269.312 187.895 284.352 187.895C299.098 187.895 310.426 182.133 318.336 170.609C326.246 158.988 330.25 142.094 330.348 119.926V109.525Z" stroke="orange" stroke-width="8" mask="url(#path-1-outside-1)" />
+                <path d="M568.238 7.71875V148.197C568.238 171.537 560.914 189.994 546.266 203.568C531.715 217.143 511.793 223.93 486.5 223.93C461.598 223.93 441.822 217.338 427.174 204.154C412.525 190.971 405.055 172.855 404.762 149.809V7.71875H448.707V148.49C448.707 162.455 452.027 172.66 458.668 179.105C465.406 185.453 474.684 188.627 486.5 188.627C511.207 188.627 523.756 175.639 524.146 149.662V7.71875H568.238Z" stroke="orange" stroke-width="8" mask="url(#path-1-outside-1)" />
+                <path d="M683.229 142.924H648.219V221H604.273V7.71875H683.521C708.717 7.71875 728.15 13.334 741.822 24.5645C755.494 35.7949 762.33 51.6641 762.33 72.1719C762.33 86.7227 759.156 98.8809 752.809 108.646C746.559 118.314 737.037 126.029 724.244 131.791L770.387 218.949V221H723.219L683.229 142.924ZM648.219 107.328H683.668C694.703 107.328 703.248 104.545 709.303 98.9785C715.357 93.3145 718.385 85.5508 718.385 75.6875C718.385 65.6289 715.504 57.7188 709.742 51.957C704.078 46.1953 695.338 43.3145 683.521 43.3145H648.219V107.328Z" stroke="orange" stroke-width="8" mask="url(#path-1-outside-1)" />
+                <path d="M969.312 221H925.367L839.82 80.668V221H795.875V7.71875H839.82L925.514 148.344V7.71875H969.312V221Z" stroke="orange" stroke-width="8" mask="url(#path-1-outside-1)" />
+                <path d="M1136.01 128.568H1051.64V185.697H1150.66V221H1007.69V7.71875H1150.37V43.3145H1051.64V94.1445H1136.01V128.568Z" stroke="orange" stroke-width="8" mask="url(#path-1-outside-1)" />
+                <path d="M1255.4 142.924H1220.39V221H1176.44V7.71875H1255.69C1280.88 7.71875 1300.32 13.334 1313.99 24.5645C1327.66 35.7949 1334.5 51.6641 1334.5 72.1719C1334.5 86.7227 1331.32 98.8809 1324.98 108.646C1318.73 118.314 1309.21 126.029 1296.41 131.791L1342.55 218.949V221H1295.39L1255.4 142.924ZM1220.39 107.328H1255.84C1266.87 107.328 1275.42 104.545 1281.47 98.9785C1287.53 93.3145 1290.55 85.5508 1290.55 75.6875C1290.55 65.6289 1287.67 57.7188 1281.91 51.957C1276.25 46.1953 1267.51 43.3145 1255.69 43.3145H1220.39V107.328Z" stroke="orange" stroke-width="8" mask="url(#path-1-outside-1)" />
+            </svg>
+            <div id="om_content">
+                <div id="om_content_top">
+                    <p></p>
+                    <br>
+                    <p></p>
+                </div>
+                <div id="om_content_bund">
+                    <img src="" alt=""> </div>
+            </div>
+            <div id="lyt_knap">
+                <a href="">
+                    <h4>Lyt på Spotify</h4>
+                </a>
+            </div>
+        </section>
+
+        <!--        <div class="design_element_o"></div>-->
+
+        <svg id="orange" class="hide" width="729" height="134" viewBox="0 0 729 134" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M132.48 49.3065L71.4992 125.874C49.6301 98.4247 27.7967 70.9576 5.9991 43.4727C11.5037 37.8943 17.0396 32.3368 22.6069 26.8002C33.0841 39.9569 43.5586 53.1081 54.0302 66.2538L54.0337 66.2581C58.5933 71.9677 63.1419 77.6658 68.03 83.8034L71.5516 88.2253L75.0713 83.8018L135.999 7.22808L196.908 83.8013L200.43 88.2284L203.952 83.8016L264.87 7.2281L325.788 83.8016L329.31 88.2277L332.831 83.8018L393.759 7.22842L454.658 83.801L458.179 88.2288L461.702 83.8016L522.62 7.22773L583.549 83.8018L587.07 88.2274L590.591 83.8018L651.502 7.24857C675.075 36.8483 698.629 66.454 722.165 96.0658C716.592 101.539 711.044 107.037 705.521 112.56C694.711 99.1059 683.965 85.6138 673.211 72.111C668.094 65.6865 662.976 59.2595 657.847 52.8331L657.841 52.8248L657.834 52.8164C656.99 51.7689 656.148 50.7541 655.004 49.3761L654.963 49.3264L651.427 45.0654L647.979 49.3976L587.1 125.884C570.96 105.603 554.914 85.4312 538.722 65.0742C534.553 59.8329 530.374 54.5794 526.182 49.3087L522.66 44.8816L519.138 49.3084L458.22 125.882L397.291 49.3082L393.77 44.8823L390.248 49.3084L329.33 125.882L268.401 49.3082L264.88 44.8826L261.359 49.3082L200.431 125.882L139.522 49.3087L136.002 44.884L132.48 49.3065Z" stroke="#F09434" stroke-width="9" />
+        </svg>
+
+
+
+        <footer>
+            <div id="footer_SoMe">
+                <img class="soMe_ikon" src="assets/SoMe/facebook.svg" alt="">
+
+                <img class="soMe_ikon" src="assets/SoMe/instagram%2016.39.32.svg" alt="">
+
+                <img class="soMe_ikon" src="assets/SoMe/spotify%2016.39.32.svg" alt="">
+
+                <img class="soMe_ikon" src="assets/SoMe/youtube%2016.39.32.svg" alt="">
+
+                <img class="soMe_ikon" src="assets/SoMe/email%2016.39.32.svg" alt="">
+            </div>
+            <div id="footer_info">
+                <h5>2019 Macaw Recordings</h5>
+            </div>
+        </footer>
+
+    </section>
+
+    <script>
+        const logo = document.querySelectorAll('#orange path')
+
+        for (let i = 0; i < logo.length; i++) {
+            console.log(`Letter ${i} is ${logo[i].getTotalLength()}`)
+        }
+
+        /*!
+         * Determine if an element is in the viewport
+         * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
+         * @param  {Node}    elem The element
+         * @return {Boolean}      Returns true if element is in the viewport
+         */
+        var isInViewport = function(elem) {
+            var distance = elem.getBoundingClientRect();
+            return (
+                distance.top >= 0 &&
+                distance.left >= 0 &&
+                distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                distance.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        };
+
+        document.addEventListener("DOMContentLoaded", findPink);
+
+        function findPink() {
+
+            console.log("heybro");
+
+            var findMe = document.querySelector('#pink');
+
+            window.addEventListener('scroll', function(event) {
+                if (isInViewport(findMe)) {
+
+                    document.querySelector("#pink").classList.remove("hide");
+
+                    document.querySelector("#plus").classList.remove("hide");
+
+                    document.querySelector("#pink").classList.add("startanimation");
+
+                    document.querySelector("#plus").classList.add("startanimation");
+
+                    document.querySelector("#pink").addEventListener("animationend", fillPink);
+
+                } else {
+                    console.log('Nope...');
+                }
+            }, false);
+
+        }
+
+        function fillPink() {
+
+            document.querySelector("#pink").classList.add("fill-ani-pink");
+
+            document.querySelector("#plus").classList.add("fill-ani-plus");
+
+            findOrange();
+
+        }
+
+
+
+        function findOrange() {
+
+            var findMe = document.querySelector('#orange');
+
+            window.addEventListener('scroll', function(event) {
+                if (isInViewport(findMe)) {
+
+                    document.querySelector("#orange").classList.remove("hide");
+                    document.querySelector("#orange").classList.add("startanimation");
+
+                    document.querySelector("#orange").addEventListener("animationend", fillOrange);
+
+                } else {
+                    console.log('Nope...');
+                }
+            }, false);
+
+        }
+
+        function fillOrange() {
+
+            this.classList.add("fill-ani-orange");
+
+        }
+
+        //        var findMe = document.querySelector('#orange');
+        //
+        //        window.addEventListener('scroll', function(event) {
+        //            if (isInViewport(findMe)) {
+        //
+        //                document.querySelector("#orange").classList.remove("hide");
+        //                document.querySelector("#orange").classList.add("startanimation");
+        //
+        //                document.querySelector("#orange").addEventListener("animationend", fill);
+        //
+        //            } else {
+        //                console.log('Nope...');
+        //            }
+        //        }, false);
+    </script>
+    <script src="script.js"></script>
+
+</body></html>

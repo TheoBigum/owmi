@@ -1,0 +1,931 @@
+* {
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+body {
+    box-sizing: border-box;
+    background-size: contain;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover h6 {
+    color: white;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 3rem;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 3rem;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 2rem;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    margin: 2vw 0;
+}
+
+h5 {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 1rem;
+}
+
+H6 {
+    font-family: 'Roboto', sans-serif;
+    color: orange;
+    font-size: 1rem;
+    margin: 1vw 0 0 2vw;
+}
+
+H7 {
+    font-family: 'courier prime', monospace;
+    color: white;
+    font-size: 1.5rem;
+
+}
+
+p {
+    font-family: 'Courier Prime', monospace;
+    color: white;
+    font-size: 1rem;
+}
+
+/******************ANIMATION***********************/
+
+
+.animation_line_logo {
+    animation: line_logo 1.5s ease forwards 1.s;
+}
+
+.animation_fill_logo {
+    animation: 1s fill_logo ease forwards 0s;
+
+}
+
+#ani_logo path:nth-child(1) {
+    stroke-dasharray: 774.0;
+    stroke-dashoffset: 774.0;
+    animation: line-ani 1.5s ease forwards;
+}
+
+#ani_logo path:nth-child(2) {
+    stroke-dasharray: 1036.3;
+    stroke-dashoffset: 1036.3;
+    animation: line-ani 1.5s ease forwards .3s;
+}
+
+#ani_logo path:nth-child(3) {
+    stroke-dasharray: 1029.2;
+    stroke-dashoffset: 1029.2;
+    animation: line-ani 1.5s ease forwards .6s;
+}
+
+#ani_logo path:nth-child(4) {
+    stroke-dasharray: 1118.6;
+    stroke-dashoffset: 1118.6;
+    animation: line-ani 1.5s ease forwards .9s;
+}
+
+#ani_logo path:nth-child(5) {
+    stroke-dasharray: 1212.1;
+    stroke-dashoffset: 1212.1;
+    animation: line-ani 1.5s ease forwards 1.2s;
+}
+
+#ani_logo path:nth-child(6) {
+    stroke-dasharray: 1078.7;
+    stroke-dashoffset: 1078.7;
+    animation: line-ani 1.5s ease forwards 1.5s;
+}
+
+#ani_logo path:nth-child(7) {
+    stroke-dasharray: 1118.6453857421875;
+    stroke-dashoffset: 1118.6453857421875;
+    animation: line-ani 1.5s ease forwards 1.8s;
+}
+
+@keyframes line-ani {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        fill: orange;
+    }
+}
+
+
+/******************Designelementer***********************/
+
+/*
+.design_element_l {
+    height: 70vw;
+    width: 12.44vw;
+    background-image: url(assets/designElementer/SVG/designElementLyseroed.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    grid-row: 2;
+    margin: 0 0 0 6vw;
+}*/
+
+#pink {
+    height: 70vw;
+    width: 12.44vw;
+    position: relative;
+    stroke-dasharray: 2329;
+    stroke-dashoffset: 2329;
+    grid-row: 2;
+    margin: 0 0 0 6vw;
+    grid-column: 2;
+
+}
+
+/*
+.design_element_o {
+    height: 12.44vw;
+    width: 70vw;
+    background-image: url(assets/designElementer/SVG/designElementOrange.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+}
+*/
+
+
+#plus {
+    height: 12vw;
+    width: 12vw;
+    grid-column: 1/span 2;
+    margin: 0 auto;
+    grid-row: 3;
+    stroke-dasharray: 767.9;
+    stroke-dashoffset: 767.9;
+}
+
+.soMe_ikon {
+    width: 6vw;
+    height: 6vw;
+}
+
+/******************HEADER***********************/
+
+header {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    ;
+}
+
+nav {
+    color: wheat;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+}
+
+#logo {
+    width: 12vh;
+    height: 12vh;
+    position: relative;
+    top: 2vw;
+    left: 27vw;
+    z-index: 1;
+}
+
+
+/******************LANDING PAGE***********************/
+
+#landingpage {
+    width: 90vw;
+    height: 80vh;
+}
+
+#lp_baggrund {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 73%;
+    background-image: url(billederTilWeb/lp_baggrund.jpg);
+    z-index: 1;
+}
+
+#baggrund_bund {
+    background-image: url(billederTilWeb/nybg.jpg);
+    z-index: 1;
+    background-size: cover;
+    border-top: 2px solid white;
+}
+
+#lp_content {
+    margin: 15vw 25vw;
+    width: 50vw;
+    height: 55vh;
+}
+
+#lp_content img {
+    width: 50vw;
+    height: 50vw;
+    margin: 0vw 0vw;
+}
+
+#lp_SoMe {
+    margin: 5vw 20vw;
+    width: 60vw;
+    height: 5vw;
+    display: grid;
+    grid-template-columns: 5vw 5vw 5vw 5vw 5vw;
+    justify-content: space-around;
+}
+
+#lp_owmi {
+    background: none;
+    margin: 5vw 10vw 20vw 10vw;
+    width: 80vw;
+    height: 43vw;
+}
+
+/******************VIDEO SECTION***********************/
+
+#video_section {
+    width: 100vw;
+    height: 242vw;
+}
+
+#video_section h2 {
+    margin: 5vw;
+}
+
+#video_fs {
+    width: 90vw;
+    height: 50.63vw;
+    margin: 0 0 0 0;
+}
+
+#video_fs iframe {
+    width: 90vw;
+    height: 50.63vw;
+    grid-column: 1 span 2;
+    grid-row: 1;
+
+}
+
+#video_content_top {
+    width: 90vw;
+    height: 218.63vw;
+    display: grid;
+    grid-template-columns: 70vw 20vw;
+    grid-template-rows: 55.63vw 65vw 17vw 80vw;
+    margin: 0 5vw 0 5vw;
+}
+
+#video_menu {
+    height: 60vw;
+    width: 70vw;
+    border: white solid 1px;
+    grid-row: 2;
+
+}
+
+#video_info {
+    width: 90vw;
+    height: 80vw;
+    border: 1px dotted white;
+    grid-row: 4;
+    grid-column: 1 span 2;
+}
+
+/******************NYHEDER***********************/
+
+#nyheder {
+    width: 90vw;
+    height: 220vw;
+    margin: 5vw;
+
+}
+
+.nyheder_col {
+    width: 90vwvw;
+    height: 110vw;
+}
+
+.nyheder_col_top {
+    width 90vw;
+    max-height: 56.25vw;
+}
+
+.nyheder_col_bund {
+    width: 90vw;
+    height: 30vw;
+}
+
+/******************KONCERTER***********************/
+
+#koncerter {
+    width: 90vw;
+    height: 90vw;
+    margin: 0 5vw 0 5vw;
+
+}
+
+#koncerter img {
+    display: none;
+}
+
+#koncert_info {
+    width: 90vw;
+    height: 70vw;
+    border: 2px dotted white;
+}
+
+/******************OM***********************/
+
+#ani_logo {
+    height: 10vh;
+    width: 90vw;
+    animation: 1s fill ease forwards 3s;
+    margin: 5vw auto;
+}
+
+#om {
+    width: 90vw;
+    height: 260vw;
+    margin: 0 5vw 0 5vw;
+
+}
+
+#om_content {
+    width: 90vw;
+    height: 210vw;
+    display: grid;
+    grid-template-rows: 105vw 105vw;
+}
+
+#om_content_top {
+    background-image: url(billederTilWeb/cover_album.jpg);
+    background-size: cover;
+    width: 90vw;
+    height: 100vw;
+    margin: 0 0 5vw 0;
+}
+
+#om_content_bund {
+    width: 90vw;
+    height: 100vw;
+    border: 2px dotted white;
+}
+
+#lyt_knap {
+    width: 60vw;
+    margin: 2vw auto;
+    text-align: center;
+}
+
+#lyt_knap:hover h4 {
+    color: orange;
+}
+
+/******************FOOTER***********************/
+
+footer {
+    width: 100vw;
+    height: 50vw;
+}
+
+#footer_SoMe {
+    margin: 10vw 20vw;
+    width: 60vw;
+    height: 5vw;
+    display: grid;
+    grid-template-columns: 5vw 5vw 5vw 5vw 5vw;
+    justify-content: space-around;
+}
+
+#footer_info {
+    width: 60vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media only screen and (min-width: 700px) {
+
+    h1 {
+        font-size: 4rem;
+
+    }
+
+    h2 {
+        font-size: 4rem;
+        margin: 0;
+    }
+
+    h3 {
+        font-size: 3rem;
+    }
+
+    h4 {}
+
+    h5 {}
+
+    H6 {}
+
+    H7 {
+
+        font-size: 2rem;
+
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    /*******************LANDING PAGE*****************/
+
+    #landingpage {}
+
+    #lp_baggrund {}
+
+    #lp_content {}
+
+    #lp_content img {}
+
+    #lp_SoMe {
+        width: 40vw;
+        margin-left: 30vw;
+    }
+
+    #lp_owmi {
+        margin: 15vw 10vw;
+    }
+
+    /******************Designelementer***********************/
+
+    .soMe_ikon {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    /******************FOOTER***********************/
+
+    footer {}
+
+    #footer_SoMe {
+        margin: 13vw 30vw;
+        width: 40vw;
+        grid-template-columns: 2vw 2vw 2vw 2vw 2vw;
+
+    }
+
+}
+
+@media only screen and (min-width: 1000px) {
+
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 7rem;
+        margin: 2.5vw 0;
+
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+        letter-spacing: 1.5px;
+        margin: 0;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+    H6 {
+        font-size: 1rem;
+        margin: 5px;
+    }
+
+    H7 {
+        font-size: 1.5rem;
+
+    }
+
+    p {
+        font-family: 'Courier Prime', monospace;
+        color: white;
+        font-size: 1rem;
+    }
+
+
+    /******************LANDING PAGE***********************/
+
+    #landingpage {
+        width: 90vw;
+        height: 70vh;
+    }
+
+    #lp_baggrund {
+        background-position: left 50% top 0%;
+        background-size: contain;
+        height: 100vw;
+
+    }
+
+    #lp_content {
+        margin: 8vw 55vw 0 15vw;
+        width: 30vw;
+        height: 55vh;
+        position: relative;
+
+    }
+
+    #lp_content img {
+        width: 300px;
+        height: 300px;
+        margin: 0;
+    }
+
+    #lp_SoMe {
+        margin: 20vh 0 0 16vw;
+        width: 300px;
+        position: relative;
+    }
+
+    #lp_owmi {
+        margin: 10vw 20vw;
+        width: 60vw;
+        height: 32vw;
+        z-index: 2;
+        position: relative;
+    }
+
+    /******************VIDEO SECTION***********************/
+
+    #video_section {
+        width: 100vw;
+        height: 60vw;
+    }
+
+    #video_fs iframe {
+        width: 50vw;
+        height: 28.13vw;
+        grid-row: 1;
+        grid-column: 2;
+        margin: 0 0 0 5vw;
+    }
+
+    #video_fs {
+        width: 50vw;
+        height: 28.13vw;
+
+    }
+
+
+
+    #video_content_top {
+        width: 90vw;
+        height: 70vw;
+        display: grid;
+        grid-template-columns: 35vw 55vw;
+        grid-template-rows: 30vw 40vw;
+        margin: 0 5vw 0 5vw;
+    }
+
+
+    #video_menu {
+        height: 30vw;
+        width: 35vw;
+        border: white solid 1px;
+        grid-row: 1;
+        grid-column: 1;
+        margin: 0;
+    }
+
+    #video_info {
+        width: 70vw;
+        height: 15vw;
+        border: 1px solid white;
+        grid-row: 2;
+        grid-column: 1 / 2;
+        margin: 2vw 10vw 0 10vw;
+
+    }
+
+    /******************NYHEDER***********************/
+
+    #nyheder {
+        width: 90vw;
+        height: 40vw;
+        margin: 0 5vw 5vw 5vw;
+
+    }
+
+    .nyheder_col {
+        width: 90vw;
+        height: 45vw;
+        display: grid;
+        grid-template-columns: 45vw 45vw;
+        grid-template-rows: 40vw;
+    }
+
+    .nyheder_col_top {
+        width 45vw;
+        max-height: 40vw;
+        height: 40vw;
+        grid-column: 1;
+        grid-row: 1;
+
+    }
+
+    .nyhed_h4 {
+        font-size: 2.5rem;
+        grid-row: 1;
+        grid-column: 2;
+        margin: 0 0 0 5vw;
+    }
+
+    .nyheder_col_bund {
+        width: 40vw;
+        height: 30vw;
+        margin: 5vw 0 0 5vw;
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    /******************KONCERTER***********************/
+
+    #koncerter {
+        width: 90vw;
+        height: 35vw;
+        margin: 0 5vw 0 5vw;
+        display: grid;
+        grid-template-rows: 30vww;
+        grid-template-columns: 45vw 45vw;
+
+    }
+
+    #koncerter img {
+        display: inherit;
+        width: 45vw;
+        height: 30vw;
+        grid-column: 1;
+        grid-row: 1;
+
+    }
+
+    #koncerter h4 {
+        grid-row: 1;
+        grid-column: 2;
+        font-size: 2.5rem;
+        margin: 0 0 0 5vw;
+    }
+
+    #koncert_info {
+        width: 40vw;
+        height: 25vw;
+        border: 1px solid white;
+        grid-column: 2;
+        grid-row: 1;
+        margin: 5vw 0 0 5vw;
+    }
+
+
+    /******************OM***********************/
+
+    #ani_logo {
+        height: 15vh;
+    }
+
+    #om {
+        height: 145vw;
+
+    }
+
+    #om_content {
+        width: 90vw;
+        height: 110vw;
+        display: grid;
+        grid-template-rows: 55vw 5vw;
+    }
+
+    #om_content_top {
+        width: 50vw;
+        height: 50vw;
+        margin: 0 auto;
+        border: none;
+        grid-row: 2;
+    }
+
+    #om_content_bund {
+        width: 50vw;
+        height: 50vw;
+        margin: 0 auto;
+        border: 1px solid white;
+        grid-row: 1;
+    }
+
+    #lyt_knap {}
+
+
+    /******************FOOTER***********************/
+
+    footer {
+        width: 100vw;
+        height: 12vw;
+        display: grid;
+        grid-template-columns: 70vw 30vw;
+    }
+
+    #footer_SoMe {
+        margin: 5vw 0 0 5vw;
+        width: 25vw;
+        height: 3vw;
+        grid-template-columns: 2vw 2vw 2vw 2vw 2vw;
+    }
+
+    #footer_info {
+        margin: 5vw 0 0 0;
+        width: 30vw;
+    }
+
+
+
+    /******************Designelementer***********************/
+
+    .design_element_l {
+        height: 30vw;
+        width: 5.48vw;
+        position: absolute;
+        top: 5vw;
+        left: 83vw;
+        /*
+        height: 30vw;
+        width: 5.48vw;
+        grid-column: 1;
+        grid-row: 2;
+        margin: 5vw auto;
+*/
+    }
+
+    .design_element_o {
+        height: 5.48vw;
+        width: 30vw;
+        margin: 0 auto 5vw;
+    }
+
+    .ikon_plus {
+        display: none;
+
+    }
+
+    .soMe_ikon {
+        width: 2vw;
+        height: 2vw;
+    }
+
+    /******************HEADER***********************/
+
+    header {
+        z-index: 3;
+    }
+
+    nav {
+        margin: 2vw 0 0 2vw;
+        position: fixed;
+        overflow: hidden;
+        z-index: 3;
+
+    }
+
+
+    #logo {
+        width: 15vh;
+        height: 15vh;
+        position: absolute;
+        top: 1vw;
+        left: 85vw;
+        z-index: 1;
+    }
+
+}
+
+/******************ANIMATION***********************/
+
+#orange {
+    height: 8vh;
+    width: 100%;
+    position: relative;
+    stroke-dasharray: 2293.6;
+    stroke-dashoffset: 2293.6;
+}
+
+
+.startanimation {
+
+    animation: line-ani 2.8s linear;
+
+}
+
+.fill-ani-orange {
+    animation: 1s fill-orange ease forwards 0s;
+
+}
+
+
+.fill-ani-pink {
+    animation: 1s fill-pink ease forwards 0s;
+
+}
+
+
+.fill-ani-plus {
+    animation: 1s fill-plus ease forwards 0s;
+
+}
+
+.hide {
+    visibility: hidden;
+}
+
+@keyframes line-ani {
+    from {
+        opacity: 0;
+    }
+
+
+    to {
+        opacity: 1;
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill-orange {
+
+    from {
+        fill: #ffffff;
+    }
+
+    to {
+        fill: #F09434;
+    }
+}
+
+@keyframes fill-pink {
+
+    from {
+        fill: #ffffff;
+    }
+
+    to {
+        fill: #f6c3ff;
+    }
+}
+
+@keyframes fill-plus {
+
+    from {
+        fill: #ffffff;
+    }
+
+    to {
+        fill: #fff;
+    }
+}
