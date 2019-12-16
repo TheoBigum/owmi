@@ -200,79 +200,79 @@
     </section>
 
     <script>
-        let videoer = [];
-        let filter = "chenai";
-        const videoUrl = "https://theobigum.com/owmiWP/wordpress/wp-json/wp/v2/videoer";
-        const skabelon = document.querySelector("#video_temp");
-        const liste = document.querySelector("#video_content_top");
-
-
-        window.addEventListener("load", sidenVises);
-
-        function sidenVises() {
-            console.log("sidenVises");
-
-            start();
-        }
-
-
-        function start() {
-            hentVideoer();
-            knapperVirker();
-        }
-
-        async function hentVideoer() {
-            const response = await fetch(videoUrl);
-            videoer = await response.json();
-            //            console.log(Videoer);
-            visVideoer();
-        }
-
-        function visVideoer() {
-
-            liste.innerHTML = "";
-
-            videoer.forEach(video => {
-
-                if (filter == "alle" || filter == video.kategori) {
-                    console.log(videoer);
-                    const klon = skabelon.cloneNode(true).content;
-
-                    //  Billederne ligger i et array, og vi benytter os da af [0], for at vise det første billede i arrayet
-
-                    klon.querySelector("#video_fs").src = video.video;
-                    klon.querySelector("#video_info").innerHTML = video.content.rendered;
-
-                    liste.appendChild(klon);
-
-                }
-            });
-
-            //    cykel.billeder.forEach(b => {});
-        }
-
-        function knapperVirker() {
-            // får alle knapper til at virke
-            document.querySelectorAll(".filter").forEach(elm => {
-                elm.addEventListener("click", filtrering);
-            })
-        }
-
-        function filtrering() {
-            filter = this.dataset.kategori;
-
-            // styrer overskriften
-            document.querySelector("#video_section h2").textContent = this.textContent;
-
-            // knapperne skifter farve
-            document.querySelectorAll(".filter").forEach(elm => {
-                elm.classList.remove("valgt");
-            })
-            this.classList.add("valgt");
-
-            visVideoer();
-        }
+        //        let videoer = [];
+        //        let filter = "chenai";
+        //        const videoUrl = "https://theobigum.com/owmiWP/wordpress/wp-json/wp/v2/videoer";
+        //        const skabelon = document.querySelector("#video_temp");
+        //        const liste = document.querySelector("#video_content_top");
+        //
+        //
+        //        window.addEventListener("load", sidenVises);
+        //
+        //        function sidenVises() {
+        //            console.log("sidenVises");
+        //
+        //            start();
+        //        }
+        //
+        //
+        //        function start() {
+        //            hentVideoer();
+        //            knapperVirker();
+        //        }
+        //
+        //        async function hentVideoer() {
+        //            const response = await fetch(videoUrl);
+        //            videoer = await response.json();
+        //            //            console.log(Videoer);
+        //            visVideoer();
+        //        }
+        //
+        //        function visVideoer() {
+        //
+        //            liste.innerHTML = "";
+        //
+        //            videoer.forEach(video => {
+        //
+        //                if (filter == "alle" || filter == video.kategori) {
+        //                    console.log(videoer);
+        //                    const klon = skabelon.cloneNode(true).content;
+        //
+        //                    //  Billederne ligger i et array, og vi benytter os da af [0], for at vise det første billede i arrayet
+        //
+        //                    klon.querySelector("#video_fs").src = video.video;
+        //                    klon.querySelector("#video_info").innerHTML = video.content.rendered;
+        //
+        //                    liste.appendChild(klon);
+        //
+        //                }
+        //            });
+        //
+        //            //    cykel.billeder.forEach(b => {});
+        //        }
+        //
+        //        function knapperVirker() {
+        //            // får alle knapper til at virke
+        //            document.querySelectorAll(".filter").forEach(elm => {
+        //                elm.addEventListener("click", filtrering);
+        //            })
+        //        }
+        //
+        //        function filtrering() {
+        //            filter = this.dataset.kategori;
+        //
+        //            // styrer overskriften
+        //            document.querySelector("#video_section h2").textContent = this.textContent;
+        //
+        //            // knapperne skifter farve
+        //            document.querySelectorAll(".filter").forEach(elm => {
+        //                elm.classList.remove("valgt");
+        //            })
+        //            this.classList.add("valgt");
+        //
+        //            visVideoer();
+        //        }
     </script>
-    <!--    <script src="script.js"></script>-->
+    <script src="script.js"></script>
 
 </body></html>
