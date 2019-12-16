@@ -21,6 +21,17 @@ a:hover h6 {
     color: white;
 }
 
+button {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 2rem;
+}
+
+.valgt {
+    text-decoration: underline;
+    text-decoration-color: #f6c3ff;
+}
+
 h1 {
     font-family: 'Roboto', sans-serif;
     color: white;
@@ -282,50 +293,63 @@ nav {
 
 #video_section {
     width: 100vw;
-    height: 242vw;
+    height: 180vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 22.5vw 110vw 70vw;
 }
 
 #video_section h2 {
     margin: 5vw;
+    grid-row: 1;
 }
 
 #video_fs {
     width: 90vw;
     height: 50.63vw;
-    margin: 0 0 0 0;
+    margin: 0 0 5vw 0;
 }
 
 #video_fs iframe {
-    /*    width: 90vw;*/
+    width: 90vw;
     height: 50.63vw;
-    grid-column: 1 span 2;
-    grid-row: 1;
-
 }
 
 #video_content_top {
     width: 90vw;
-    height: 218.63vw;
-    display: grid;
-    grid-template-columns: 70vw 20vw;
-    grid-template-rows: 55.63vw 65vw 17vw 80vw;
+    height: 100vw;
     margin: 0 5vw 0 5vw;
+    grid-row: 2;
+
 }
 
 #video_menu {
-    height: 60vw;
+    height: 50vw;
     width: 70vw;
-    border: white solid 1px;
-    grid-row: 2;
+    margin: 0 5vw;
+    grid-row: 3;
+}
+
+#video_menu button {
+    background: none;
+    color: white;
+    font-family: 'roboto', sans serif;
+    border: none;
+    cursor: pointer;
+    outline: inherit;
 
 }
 
 #video_info {
     width: 90vw;
-    height: 80vw;
-    border: 1px dotted white;
-    grid-row: 4;
-    grid-column: 1 span 2;
+    height: 50vw;
+    margin: 0 auto;
+    text-align: left;
+    border: dotted 1px white;
+}
+
+#video_info p {
+    padding: 1vw;
 }
 
 /******************NYHEDER***********************/
@@ -491,6 +515,33 @@ footer {
         margin: 15vw 10vw;
     }
 
+    /******************Video***********************/
+
+    #video_section {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 17vw 80vw 50vw;
+    }
+
+    #video_menu button {
+        font-size: 4rem;
+        width: 90vw;
+        text-align: left;
+
+    }
+
+    #video_content_top {
+        height: 80vw;
+    }
+
+
+
+    #video_info {
+        height: 20vw;
+    }
+
+
+
     /******************Designelementer***********************/
 
     .soMe_ikon {
@@ -600,53 +651,33 @@ footer {
     /******************VIDEO SECTION***********************/
 
     #video_section {
-        width: 100vw;
-        height: 60vw;
+        display: grid;
+        grid-template-columns: 40vw 60vw;
+        grid-template-rows: 17vw 30vw 50vw;
     }
 
-    #video_fs iframe {
-        width: 50vw;
-        height: 28.13vw;
-        grid-row: 1;
-        grid-column: 2;
-        margin: 0 0 0 5vw;
+    #video_menu {
+        width: 40vw;
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    #video_content_top {
+        height: 60vw;
+        width: 40vw;
+
     }
 
     #video_fs {
         width: 50vw;
-        height: 28.13vw;
-
-    }
-
-
-
-    #video_content_top {
-        width: 90vw;
-        height: 70vw;
-        display: grid;
-        grid-template-columns: 35vw 55vw;
-        grid-template-rows: 30vw 40vw;
-        margin: 0 5vw 0 5vw;
-    }
-
-
-    #video_menu {
-        height: 30vw;
-        width: 35vw;
-        border: white solid 1px;
-        grid-row: 1;
-        grid-column: 1;
+        height: 35vw;
         margin: 0;
     }
 
     #video_info {
-        width: 70vw;
-        height: 15vw;
-        border: 1px solid white;
-        grid-row: 2;
-        grid-column: 1 / 2;
-        margin: 2vw 10vw 0 10vw;
-
+        width: 50vw;
+        height: 10vw;
+        grid-row: 3;
     }
 
     /******************NYHEDER***********************/
