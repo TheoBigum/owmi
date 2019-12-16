@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koga Center Copenhagen</title>
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="kogacomstyle.css">
+    <link rel="stylesheet" href="https://use.typekit.net/wub3opw.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+    <header>
+        <div id="menu_box">
+            <nav>
+                <div id="menu">
+                    <a href="index.html">FORSIDE</a>
+                    <a href="kogaom.html">OM KOGA</a>
+                    <a href="kogacykler.html">CYKLER</a>
+                    <a href="kogakontakt.html">KONTAKT</a>
+                    <a href="kogafaq.html">FAQ</a>
+                </div>
+            </nav>
+        </div>
+        <a href="index.html">
+            <div id="logo_box"></div>
+        </a>
+    </header>
+
+    <section class="splash">
+        <div class="splash_kasse">
+            <h1>UDVALG AF CYKLER</h1>
+        </div>
+        <img src="assets/1x1/Koga-021.jpg" alt="Stort billede af en kvinde med en Koga cykel.">
+    </section>
+
+    <div id="shop_top" class="text_center">
+    </div>
+    <div class="text_center">
+        <div id="knapper">
+            <button class="filter valgt" data-kategori="alle">ALLE</button>
+            <button class="filter" data-kategori="Race-bike">RACING</button>
+            <button class="filter" data-kategori="E-bike">E-BIKE</button>
+            <button class="filter" data-kategori="City/Touring-Bike">CITY TOUR</button>
+        </div>
+    </div>
+
+    <section class="box3">
+        <template>
+            <article class="box">
+                <img class="billede" src="">
+                <div class="info">
+                    <h2 class="title"></h2>
+                    <h3 class="pris"></h3>
+                </div>
+            </article>
+        </template>
+    </section>
+
+    <a href="https://www.koga.com/en/koga-signature">
+        <section class="box1">
+            <img src="assets/1x1/kogaSignature.jpg" alt="Billede af Koga Signature">
+        </section>
+    </a>
+
+    <section class="box4">
+        <a href="kogacykler.html"><img src="assets/1x4/Cykler.jpg" alt="Link til Kogas Cykler"></a>
+        <a href="https://www.facebook.com/groups/302644196440482/"><img src="assets/1x4/klubKoga.jpg" alt="Link til Klub Koga"></a>
+        <a href="kogakontakt.html"><img src="assets/1x4/kontakt.jpg" alt="Link til kontakt information"></a>
+        <a href="kogaom.html"><img src="assets/1x4/omKoga.jpg" alt="Link til Om Koga"></a>
+    </section>
+
+    <footer>
+        <div class="blok">
+
+            <h2>CYKLER</h2>
+            <ul>
+                <a href="kogacykler.html">
+                    <li>Racing</li>
+                </a>
+                <a href="kogacykler.html">
+                    <li>City</li>
+                </a>
+                <a href="kogacykler.html">
+                    <li>Touring</li>
+                </a>
+            </ul>
+        </div>
+        <div class="blok">
+            <h2>SERVICE</h2>
+            <ul>
+                <a href="kogakontakt.html">
+                    <li>Kontakt</li>
+                </a>
+                <a href="">
+                    <li>Faq</li>
+                </a>
+                <a href="">
+                    <li>Instruktions Manualer</li>
+                </a>
+                <a href="">
+                    <li>Garanti</li>
+                </a>
+            </ul>
+        </div>
+        <div class="blok">
+            <h2>OM KOGA</h2>
+            <ul>
+                <a href="kogaom.html">
+                    <li>Min koga og jeg</li>
+                </a>
+                <a href="kogaom.html">
+                    <li>Historie</li>
+                </a>
+                <a href="kogaom.html">
+                    <li>Forretning</li>
+                </a>
+            </ul>
+        </div>
+        <div class="blok">
+            <h2>SOCIAL</h2>
+            <div id="social">
+                <a href="https://www.facebook.com/kogacenter/">
+                    <div id="fb" class="ikon"></div>
+                </a>
+                <a href="https://twitter.com/Kogacenter?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Eprofile%3AKogacenter&ref_url=http%3A%2F%2Fwww.kogacenter.dk%2F">
+                    <div id="tw" class="ikon"></div>
+                </a>
+                <a href="https://www.instagram.com/kogabikes/?hl=da">
+                    <div id="ig" class="ikon"></div>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <script>
+        let cykler = [];
+        let filter = "alle";
+        const cyklerUrl = "https://victorborgen.dk/kogacenter/wordpress/wp-json/wp/v2/cykler?per_page=50";
+        const skabelon = document.querySelector("template");
+        const liste = document.querySelector(".box3");
+
+
+
+        window.addEventListener("load", sidenVises);
+
+        function sidenVises() {
+            console.log("sidenVises");
+
+            start();
+        }
+
+
+        function start() {
+            hentCykler();
+            knapperVirker();
+        }
+
+        async function hentCykler() {
+            const response = await fetch(cyklerUrl);
+            cykler = await response.json();
+            console.log(cykler);
+            visCykler();
+        }
+
+        function visCykler() {
+
+            liste.innerHTML = "";
+
+            cykler.forEach(cykel => {
+
+                if (filter == "alle" || filter == cykel.cykel_type) {
+                    console.log(cykler);
+                    const klon = skabelon.cloneNode(true).content;
+
+                    //  Billederne ligger i et array, og vi benytter os da af [0], for at vise det første billede i arrayet
+
+                    klon.querySelector(".billede").src = cykel.billede[0].guid;
+                    klon.querySelector(".billede").alt = cykel.title.rendered + " billede";
+                    klon.querySelector(".title").textContent = cykel.title.rendered;
+                    klon.querySelector(".pris").textContent = `DKK ${cykel.
+                    pris_cykel}`;
+
+                    liste.appendChild(klon);
+
+                    liste.lastElementChild.addEventListener("click", () => {
+                        location.href = `singleview.html?id=${cykel.id}`;
+                    });
+                }
+            });
+
+            //    cykel.billeder.forEach(b => {});
+        }
+
+        function knapperVirker() {
+            // får alle knapper til at virke
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.addEventListener("click", filtrering);
+            })
+        }
+
+        function filtrering() {
+            filter = this.dataset.kategori;
+
+            // styrer overskriften
+            document.querySelector("h1").textContent = this.textContent;
+
+            // knapperne skifter farve
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.classList.remove("valgt");
+            })
+            this.classList.add("valgt");
+
+            visCykler();
+        }
+    </script>
+</body></html>

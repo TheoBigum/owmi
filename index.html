@@ -79,23 +79,31 @@
 
         <section id="video_section">
             <h2>VIDEOER</h2>
-            <div id="video_content_top">
-                <div id="video_fs">
-                    <iframe src="https://www.youtube.com/embed/aYGV8JSxVDE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div id="video_menu">
-                    <li>
-                        <a href="" class="menu">Første video</a>
-                        <a href="" class="menu">anden video</a>
-                        <a href="" class="menu">tredje video</a>
-                        <a href="" class="menu">fjerde video</a>
-                    </li>
 
-                </div>
-                <div class="design_element_l"></div>
-                <div class="ikon_plus"></div>
-                <div id="video_info"></div>
+            <div id="video_menu">
+                <button class="filter filter_valgt" data-kategori="chenai">CHENAI</button>
+                <button class="filter" data-kategori="moonshot">Moonshot</button>
+                <button class="filter" data-kategori="tourner">Tourner</button>
+                <button class="filter" data-kategori="beats">Beats and Lies</button>
             </div>
+
+            <div id="video_content_top">
+
+            </div>
+
+
+
+
+            <template id="video_temp">
+
+
+                <iframe id="video_fs" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <div id="video_info"></div>
+
+
+            </template>
+
         </section>
 
         <section id="nyheder">
@@ -196,6 +204,121 @@
     </section>
 
     <script>
+        let videoer = [];
+        let filter = "chenai";
+        const videoUrl = "https://theobigum.com/owmiWP/wordpress/wp-json/wp/v2/videoer";
+        const skabelon = document.querySelector("#video_temp");
+        const liste = document.querySelector("#video_content_top");
+
+
+        window.addEventListener("load", sidenVises);
+
+        function sidenVises() {
+            console.log("sidenVises");
+
+            start();
+        }
+
+
+        function start() {
+            hentVideoer();
+            knapperVirker();
+        }
+
+        async function hentVideoer() {
+            const response = await fetch(videoUrl);
+            videoer = await response.json();
+            //            console.log(Videoer);
+            visVideoer();
+        }
+
+        function visVideoer() {
+
+            liste.innerHTML = "";
+
+            videoer.forEach(video => {
+
+                if (filter == "alle" || filter == video.kategori) {
+                    console.log(videoer);
+                    const klon = skabelon.cloneNode(true).content;
+
+                    //  Billederne ligger i et array, og vi benytter os da af [0], for at vise det første billede i arrayet
+
+                    klon.querySelector("#video_fs").src = video.video;
+                    klon.querySelector("#video_info").innerHTML = video.content.rendered;
+
+                    liste.appendChild(klon);
+
+                }
+            });
+
+            //    cykel.billeder.forEach(b => {});
+        }
+
+        function knapperVirker() {
+            // får alle knapper til at virke
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.addEventListener("click", filtrering);
+            })
+        }
+
+        function filtrering() {
+            filter = this.dataset.kategori;
+
+            // styrer overskriften
+            document.querySelector("#video_section h2").textContent = this.textContent;
+
+            // knapperne skifter farve
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.classList.remove("valgt");
+            })
+            this.classList.add("valgt");
+
+            visVideoer();
+        }
+
+        document.addEventListener("DOMContentLoaded", hentJson);
+
+        const url = "https://theobigum.com/owmiWP/wordpress/wp-json/wp/v2/videoer";
+        let filter = "alle";
+
+        async function hentJson() {
+            const response = await fetch(url);
+            const video = await response.json();
+            vis(video);
+            knapperDerNapper();
+        }
+
+
+        function knapperDerNapper() {
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.addEventListener("click", filtrering);
+            })
+        }
+
+        function filtrering() {
+            filter = this.dataset.kategori;
+
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.classList.remove("filter_valgt");
+            })
+
+            this.classlist.add("filter_valgt");
+
+            vis(video);
+
+        }
+
+
+        function vis(video) {
+
+            if (filter == "alle" || filter == video.kategori) {
+                console.log(video);
+
+                document.querySelector("#video_info").innerHTML = video[0].content.rendered;
+                document.querySelector("#video_fs").src = video[0].video;
+            };
+        }
         const logo = document.querySelectorAll('#ani_logo path')
 
         for (let i = 0; i < logo.length; i++) {

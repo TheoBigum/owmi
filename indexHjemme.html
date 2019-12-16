@@ -43,12 +43,15 @@
 
 
     <section id="landingpage">
+        <section id="forside"></section>
 
-        <div id="lp_content">
-            <h1>Tourner</h1>
-            <h7>Debutalbum ude nu</h7>
-            <img src="billederTilWeb/cover_album.jpg" alt="Debutalbum cover">
-        </div>
+        <template id="forside_temp">
+            <article id="lp_content">
+                <h3 class="forside_h3"></h3>
+                <h5 class="forside_h5"></h5>
+                <img class="forside_img">
+            </article>
+        </template>
 
         <div id="lp_SoMe">
             <img class="soMe_ikon" src="assets/SoMe/facebook.svg" alt="">
@@ -70,21 +73,30 @@
 
     <section id="baggrund_bund">
 
-
-
         <section id="video_section">
+
             <h2>VIDEOER</h2>
             <div id="video_content_top">
-                <div id="video_fs">
-                    <iframe src="https://www.youtube.com/embed/aYGV8JSxVDE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <iframe id="video_fs" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <div id="video_menu">
+                    <li>
+                        <a href="" class="menu">Første video</a>
+                        <a href="" class="menu">anden video</a>
+                        <a href="" class="menu">tredje video</a>
+                        <a href="" class="menu">fjerde video</a>
+                    </li>
+
                 </div>
-                <div id="video_menu"></div>
                 <svg id="pink" class="hide" width="134" height="729" viewBox="0 0 134 729" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 205.58L81 270L0 334.47L81 398.92L0 463.37L81 527.81L0 592.25L81 656.69L63.45 670.69L20.05 705.22C27.69 712.95 35.41 720.61 43.13 728.22C72.21 705.133 101.28 682.02 130.34 658.88C131.2 658.19 131.96 657.37 132.9 656.48L52.14 592.2L133.14 527.77L52.14 463.32L133.14 398.88L52.14 334.44L133.14 269.98L52.14 205.55L133.14 141.1L52.24 76.71L55.67 73.87C75.89 57.7233 96.1367 41.5633 116.41 25.39C117.378 24.6151 118.278 23.7586 119.1 22.83C111.513 15.2633 103.967 7.65333 96.46 0C96.34 0.08 96.22 0.16 96.11 0.25C65.01 24.9633 33.9267 49.6933 2.86 74.44C1.99 75.13 1.21 75.94 0.21 76.85C27.21 98.35 53.92 119.58 81 141.14L0 205.58Z" stroke="#F6C3FF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
                 <svg id="plus" width="195" height="208" viewBox="0 0 195 208" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M119.918 76.8282V81.3282H124.418H190.426V123.305H124.418H119.918V127.805V202.992H75.2071V127.805V123.305H70.7071H4.50401V81.3282H70.7071H75.2071V76.8282V4.96104H119.918V76.8282Z" stroke="white" stroke-width="9" />
                 </svg>
+                <div class="design_element_l"></div>
+                <div class="ikon_plus"></div>
                 <div id="video_info"></div>
             </div>
         </section>
@@ -192,108 +204,91 @@
     </section>
 
     <script>
+        document.addEventListener("DOMContentLoaded", hentJson);
+
+        const url = "https://theobigum.com/owmiWP/wordpress/wp-json/wp/v2/videoer";
+
+        async function hentJson() {
+            const response = await fetch(url);
+            const video = await response.json();
+            vis(video);
+        }
+
+        function vis(video) {
+
+            document.querySelector("#video_info").innerHTML = video[0].content.rendered;
+            document.querySelector("#video_fs").src = video[0].video;
+        };
+
+        //    cykel.billeder.forEach(b => {});
+
         const logo = document.querySelectorAll('#orange path')
 
         for (let i = 0; i < logo.length; i++) {
             console.log(`Letter ${i} is ${logo[i].getTotalLength()}`)
         }
 
-        /*!
-         * Determine if an element is in the viewport
-         * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
-         * @param  {Node}    elem The element
-         * @return {Boolean}      Returns true if element is in the viewport
-         */
+        //  Determine
+        // if an element is in the viewport * (c) 2017 Chris Ferdinandi, MIT License, https / gomakethings.com * @param {
+        // Node
+        // }
+        // elem The element * @return {
+        // Boolean
+        // }
+        // Returns true
+        // if element is in the viewport
+        //
         var isInViewport = function(elem) {
             var distance = elem.getBoundingClientRect();
-            return (
-                distance.top >= 0 &&
-                distance.left >= 0 &&
-                distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                distance.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
-        };
+            return (distance.top >= 0 &&
 
+                distance.left >= 0 &&
+                distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) && distance.right <= (window.innerWidth || document.documentElement.clientWidth));
+        };
         document.addEventListener("DOMContentLoaded", findPink);
 
         function findPink() {
-
             console.log("heybro");
-
             var findMe = document.querySelector('#pink');
-
             window.addEventListener('scroll', function(event) {
+
                 if (isInViewport(findMe)) {
-
                     document.querySelector("#pink").classList.remove("hide");
-
                     document.querySelector("#plus").classList.remove("hide");
-
                     document.querySelector("#pink").classList.add("startanimation");
-
                     document.querySelector("#plus").classList.add("startanimation");
-
                     document.querySelector("#pink").addEventListener("animationend", fillPink);
-
                 } else {
                     console.log('Nope...');
                 }
             }, false);
-
         }
 
         function fillPink() {
-
             document.querySelector("#pink").classList.add("fill-ani-pink");
-
             document.querySelector("#plus").classList.add("fill-ani-plus");
-
             findOrange();
-
         }
 
-
-
         function findOrange() {
-
             var findMe = document.querySelector('#orange');
-
             window.addEventListener('scroll', function(event) {
                 if (isInViewport(findMe)) {
-
                     document.querySelector("#orange").classList.remove("hide");
                     document.querySelector("#orange").classList.add("startanimation");
-
                     document.querySelector("#orange").addEventListener("animationend", fillOrange);
-
                 } else {
                     console.log('Nope...');
                 }
             }, false);
-
         }
 
         function fillOrange() {
-
             this.classList.add("fill-ani-orange");
-
         }
-
-        //        var findMe = document.querySelector('#orange');
-        //
-        //        window.addEventListener('scroll', function(event) {
-        //            if (isInViewport(findMe)) {
-        //
-        //                document.querySelector("#orange").classList.remove("hide");
-        //                document.querySelector("#orange").classList.add("startanimation");
-        //
-        //                document.querySelector("#orange").addEventListener("animationend", fill);
-        //
-        //            } else {
-        //                console.log('Nope...');
-        //            }
-        //        }, false);
     </script>
-    <script src="script.js"></script>
+    <script src="script.js">
+    </script>
+
 
 </body></html>

@@ -296,7 +296,7 @@ nav {
 }
 
 #video_fs iframe {
-    width: 90vw;
+    /*    width: 90vw;*/
     height: 50.63vw;
     grid-column: 1 span 2;
     grid-row: 1;
