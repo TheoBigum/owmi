@@ -97,10 +97,15 @@
 
                 <div id="video_info"></div>
 
-
             </template>
 
+            <h4 id="video_para">Duoen OWMI dyrker et alternativt udtryk med et bagtæppe af elektro-akustiske lydbilleder og sjælfyldte vokal-kollager. Med en stor forkærlighed til håndspillede instrumenter og moderne teknologi skaber OWMI et eklektisk og mindeværdigt lydunivers</h4>
+
         </section>
+
+        <svg id="pink" class="hide" width="134" height="729" viewBox="0 0 134 729" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 205.58L81 270L0 334.47L81 398.92L0 463.37L81 527.81L0 592.25L81 656.69L63.45 670.69L20.05 705.22C27.69 712.95 35.41 720.61 43.13 728.22C72.21 705.133 101.28 682.02 130.34 658.88C131.2 658.19 131.96 657.37 132.9 656.48L52.14 592.2L133.14 527.77L52.14 463.32L133.14 398.88L52.14 334.44L133.14 269.98L52.14 205.55L133.14 141.1L52.24 76.71L55.67 73.87C75.89 57.7233 96.1367 41.5633 116.41 25.39C117.378 24.6151 118.278 23.7586 119.1 22.83C111.513 15.2633 103.967 7.65333 96.46 0C96.34 0.08 96.22 0.16 96.11 0.25C65.01 24.9633 33.9267 49.6933 2.86 74.44C1.99 75.13 1.21 75.94 0.21 76.85C27.21 98.35 53.92 119.58 81 141.14L0 205.58Z" stroke="#F6C3FF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
 
         <section id="nyheder">
             <h2>NYHEDER</h2>
@@ -176,8 +181,9 @@
             </div>
         </section>
 
-        <div class="design_element_o"></div>
-
+        <svg id="orange" class="hide" width="729" height="134" viewBox="0 0 729 134" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M132.48 49.3065L71.4992 125.874C49.6301 98.4247 27.7967 70.9576 5.9991 43.4727C11.5037 37.8943 17.0396 32.3368 22.6069 26.8002C33.0841 39.9569 43.5586 53.1081 54.0302 66.2538L54.0337 66.2581C58.5933 71.9677 63.1419 77.6658 68.03 83.8034L71.5516 88.2253L75.0713 83.8018L135.999 7.22808L196.908 83.8013L200.43 88.2284L203.952 83.8016L264.87 7.2281L325.788 83.8016L329.31 88.2277L332.831 83.8018L393.759 7.22842L454.658 83.801L458.179 88.2288L461.702 83.8016L522.62 7.22773L583.549 83.8018L587.07 88.2274L590.591 83.8018L651.502 7.24857C675.075 36.8483 698.629 66.454 722.165 96.0658C716.592 101.539 711.044 107.037 705.521 112.56C694.711 99.1059 683.965 85.6138 673.211 72.111C668.094 65.6865 662.976 59.2595 657.847 52.8331L657.841 52.8248L657.834 52.8164C656.99 51.7689 656.148 50.7541 655.004 49.3761L654.963 49.3264L651.427 45.0654L647.979 49.3976L587.1 125.884C570.96 105.603 554.914 85.4312 538.722 65.0742C534.553 59.8329 530.374 54.5794 526.182 49.3087L522.66 44.8816L519.138 49.3084L458.22 125.882L397.291 49.3082L393.77 44.8823L390.248 49.3084L329.33 125.882L268.401 49.3082L264.88 44.8826L261.359 49.3082L200.431 125.882L139.522 49.3087L136.002 44.884L132.48 49.3065Z" stroke="#F09434" stroke-width="9" />
+        </svg>
 
 
         <footer>
@@ -200,79 +206,74 @@
     </section>
 
     <script>
-        //        let videoer = [];
-        //        let filter = "chenai";
-        //        const videoUrl = "https://theobigum.com/owmiWP/wordpress/wp-json/wp/v2/videoer";
-        //        const skabelon = document.querySelector("#video_temp");
-        //        const liste = document.querySelector("#video_content_top");
+        //    cykel.billeder.forEach(b => {});
+
+        const logo = document.querySelectorAll('#orange path')
+
+        for (let i = 0; i < logo.length; i++) {
+            console.log(`Letter ${i} is ${logo[i].getTotalLength()}`)
+        }
+
+        //  Determine
+        // if an element is in the viewport * (c) 2017 Chris Ferdinandi, MIT License, https / gomakethings.com * @param {
+        // Node
+        // }
+        // elem The element * @return {
+        // Boolean
+        // }
+        // Returns true
+        // if element is in the viewport
         //
-        //
-        //        window.addEventListener("load", sidenVises);
-        //
-        //        function sidenVises() {
-        //            console.log("sidenVises");
-        //
-        //            start();
-        //        }
-        //
-        //
-        //        function start() {
-        //            hentVideoer();
-        //            knapperVirker();
-        //        }
-        //
-        //        async function hentVideoer() {
-        //            const response = await fetch(videoUrl);
-        //            videoer = await response.json();
-        //            //            console.log(Videoer);
-        //            visVideoer();
-        //        }
-        //
-        //        function visVideoer() {
-        //
-        //            liste.innerHTML = "";
-        //
-        //            videoer.forEach(video => {
-        //
-        //                if (filter == "alle" || filter == video.kategori) {
-        //                    console.log(videoer);
-        //                    const klon = skabelon.cloneNode(true).content;
-        //
-        //                    //  Billederne ligger i et array, og vi benytter os da af [0], for at vise det første billede i arrayet
-        //
-        //                    klon.querySelector("#video_fs").src = video.video;
-        //                    klon.querySelector("#video_info").innerHTML = video.content.rendered;
-        //
-        //                    liste.appendChild(klon);
-        //
-        //                }
-        //            });
-        //
-        //            //    cykel.billeder.forEach(b => {});
-        //        }
-        //
-        //        function knapperVirker() {
-        //            // får alle knapper til at virke
-        //            document.querySelectorAll(".filter").forEach(elm => {
-        //                elm.addEventListener("click", filtrering);
-        //            })
-        //        }
-        //
-        //        function filtrering() {
-        //            filter = this.dataset.kategori;
-        //
-        //            // styrer overskriften
-        //            document.querySelector("#video_section h2").textContent = this.textContent;
-        //
-        //            // knapperne skifter farve
-        //            document.querySelectorAll(".filter").forEach(elm => {
-        //                elm.classList.remove("valgt");
-        //            })
-        //            this.classList.add("valgt");
-        //
-        //            visVideoer();
-        //        }
+        var isInViewport = function(elem) {
+            var distance = elem.getBoundingClientRect();
+            return (distance.top >= 0 &&
+
+                distance.left >= 0 &&
+                distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) && distance.right <= (window.innerWidth || document.documentElement.clientWidth));
+        };
+        document.addEventListener("DOMContentLoaded", findPink);
+
+        function findPink() {
+            console.log("heybro");
+            var findMe = document.querySelector('#pink');
+            window.addEventListener('scroll', function(event) {
+
+                if (isInViewport(findMe)) {
+                    document.querySelector("#pink").classList.remove("hide");
+
+                    document.querySelector("#pink").classList.add("startanimation");
+
+                    document.querySelector("#pink").addEventListener("animationend", fillPink);
+                } else {
+                    console.log('Nope...');
+                }
+            }, false);
+        }
+
+        function fillPink() {
+            document.querySelector("#pink").classList.add("fill-ani-pink");
+
+            findOrange();
+        }
+
+        function findOrange() {
+            var findMe = document.querySelector('#orange');
+            window.addEventListener('scroll', function(event) {
+                if (isInViewport(findMe)) {
+                    document.querySelector("#orange").classList.remove("hide");
+                    document.querySelector("#orange").classList.add("startanimation");
+                    document.querySelector("#orange").addEventListener("animationend", fillOrange);
+                } else {
+                    console.log('Nope...');
+                }
+            }, false);
+        }
+
+        function fillOrange() {
+            this.classList.add("fill-ani-orange");
+        }
     </script>
-    <script src="script.js"></script>
+    <script src="script.js">
+    </script>
 
 </body></html>

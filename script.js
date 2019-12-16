@@ -6,7 +6,7 @@
  const forside_temp = document.querySelector("#forside_temp");
 
  let videoer = [];
- let filter = "chenai";
+ let filter = "moonshot";
  const videoUrl = "https://theobigum.com/owmiWP/wordpress/wp-json/wp/v2/videoer";
  const skabelon = document.querySelector("#video_temp");
  const liste = document.querySelector("#video_content_top");
@@ -72,6 +72,7 @@
 
          if (filter == "alle" || filter == video.kategori) {
              console.log(videoer);
+
              const klon = skabelon.cloneNode(true).content;
 
              klon.querySelector("#video_fs").src = video.video;
@@ -82,7 +83,6 @@
          }
      });
 
-     //    cykel.billeder.forEach(b => {});
  }
 
  function knapperVirker() {
@@ -96,7 +96,7 @@
      filter = this.dataset.kategori;
 
      // styrer overskriften
-     document.querySelector("#video_section h2").textContent = this.textContent;
+     //     document.querySelector("#video_section h2").textContent = this.textContent;
 
      // knapperne skifter farve
      document.querySelectorAll(".filter").forEach(elm => {
