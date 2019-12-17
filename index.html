@@ -14,16 +14,16 @@
     <header>
         <nav>
             <a href="#video_section">
-                <h6>VIDEOER</h6>
+                <h6>VIDEOS</h6>
             </a>
             <a href="#nyheder">
-                <h6>NYHEDER</h6>
+                <h6>NEWS</h6>
             </a>
             <a href="#koncerter">
-                <h6>KONCERTER</h6>
+                <h6>CONCERTS</h6>
             </a>
             <a href="#om">
-                <h6>OM</h6>
+                <h6>ABOUT</h6>
             </a>
         </nav>
         <img id="logo" src="assets/designElementer/owmiLogo.png" alt="">
@@ -47,13 +47,6 @@
             </article>
         </template>
 
-        <!--
-        <div id="lp_content">
-            <h1>Tourner</h1>
-            <h7>Debutalbum ude nu</h7>
-            <img src="billederTilWeb/cover_album.jpg" alt="Debutalbum cover">
-        </div>
--->
 
         <div id="lp_SoMe">
             <img class="soMe_ikon" src="assets/SoMe/facebook.svg" alt="">
@@ -78,10 +71,10 @@
 
 
         <section id="video_section">
-            <h2>VIDEOER</h2>
+            <h2>VIDEOS</h2>
 
             <div id="video_menu">
-                <button class="filter filter_valgt" data-kategori="chenai">Chenai</button>
+                <button class="filter filter_valgt valgt" data-kategori="chenai">Chenai</button>
                 <button class="filter" data-kategori="moonshot">Moonshot</button>
                 <button class="filter" data-kategori="tourner">Tourner</button>
                 <button class="filter" data-kategori="beats">Beats and Lies</button>
@@ -108,14 +101,16 @@
         </svg>
 
         <section id="nyheder">
-            <h2>NYHEDER</h2>
+            <h2>NEWS</h2>
 
             <template id="nyhed_temp">
                 <article class="nyheder_col">
                     <h4 class="nyhed_h4"></h4>
                     <div class="nyheder_col_top">
+
                         <img class="nyhed_img">
                     </div>
+
                     <div class="nyheder_col_bund">
                         <p class="nyhed_p"></p>
                     </div>
@@ -142,13 +137,13 @@
 
 
         <section id="koncerter">
-            <H4>KONCERTER</H4>
+            <H4>CONCERTS</H4>
             <template id="koncerter_temp">
 
                 <h4 class="koncert_h4"></h4>
                 <img class="koncert_img">
                 <div id="koncert_info">
-                    <p class="koncert_p"></p>
+                    <!--                    <p class="koncert_p"></p>-->
                     <p class="koncert_p2"></p>
                 </div>
             </template>
@@ -167,18 +162,12 @@
             </svg>
             <div id="om_content">
                 <div id="om_content_top">
-                    <p></p>
-                    <br>
-                    <p></p>
                 </div>
-                <div id="om_content_bund">
-                    <img src="" alt=""> </div>
-            </div>
-            <div id="lyt_knap">
-                <a href="">
-                    <h4>Lyt på Spotify</h4>
-                </a>
-            </div>
+                <div id="lyt_knap">
+                    <a href="https://open.spotify.com/artist/2QHpjVyj9hRAS3WWjAnn26" target="_blank">
+                        <h4>Listen on Spotify</h4>
+                    </a>
+                </div>
         </section>
 
         <svg id="orange" class="hide" width="729" height="134" viewBox="0 0 729 134" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -113,7 +113,7 @@
          const klon = koncerter_temp.cloneNode(true).content;
          klon.querySelector(".koncert_img").src = koncert.koncerter_billede.guid;
          klon.querySelector(".koncert_h4").textContent = koncert.title.rendered;
-         klon.querySelector(".koncert_p").textContent = koncert.koncert_text;
+//         klon.querySelector(".koncert_p").textContent = koncert.koncert_text;
          klon.querySelector(".koncert_p2").innerHTML = koncert.content.rendered;
          koncerter_dest.appendChild(klon);
 
