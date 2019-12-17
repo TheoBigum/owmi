@@ -30,9 +30,9 @@
      let forside_jsonData = await fetch("http://theobigum.com/owmiWP/wordpress/wp-json/wp/v2/forside");
      forside = await forside_jsonData.json();
 
+
      const response = await fetch(videoUrl);
      videoer = await response.json();
-     //            console.log(Videoer);
 
 
      let koncerter_jsonData = await fetch("http://theobigum.com/owmiWP/wordpress/wp-json/wp/v2/koncerter");
@@ -113,7 +113,7 @@
          const klon = koncerter_temp.cloneNode(true).content;
          klon.querySelector(".koncert_img").src = koncert.koncerter_billede.guid;
          klon.querySelector(".koncert_h4").textContent = koncert.title.rendered;
-//         klon.querySelector(".koncert_p").textContent = koncert.koncert_text;
+         //         klon.querySelector(".koncert_p").textContent = koncert.koncert_text;
          klon.querySelector(".koncert_p2").innerHTML = koncert.content.rendered;
          koncerter_dest.appendChild(klon);
 
