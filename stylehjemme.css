@@ -442,12 +442,6 @@ nav {
     margin: 0 0 5vw 0;
 }
 
-#om_content_bund {
-    width: 90vw;
-    height: 100vw;
-    border: 2px dotted white;
-}
-
 #lyt_knap {
     width: 60vw;
     margin: 2vw auto;
@@ -811,15 +805,15 @@ footer {
     }
 
     #om {
-        height: 145vw;
+        height: 85vw;
 
     }
 
     #om_content {
         width: 90vw;
-        height: 110vw;
+        height: 55vw;
         display: grid;
-        grid-template-rows: 55vw 5vw;
+        grid-template-rows: 55vw 3vw;
     }
 
     #om_content_top {
@@ -827,14 +821,6 @@ footer {
         height: 50vw;
         margin: 0 auto;
         border: none;
-        grid-row: 2;
-    }
-
-    #om_content_bund {
-        width: 50vw;
-        height: 50vw;
-        margin: 0 auto;
-        border: 1px solid white;
         grid-row: 1;
     }
 
