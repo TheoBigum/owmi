@@ -645,6 +645,10 @@ footer {
 
     /******************LANDING PAGE***********************/
 
+    .forside_h3 {
+        font-size: 3rem;
+    }
+
     #landingpage {
         height: 70vh;
 
