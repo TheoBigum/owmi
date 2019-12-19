@@ -19,7 +19,11 @@
 
 <body>
     <header>
-        <nav>
+
+        <div id="menu_kasse">
+            MENU </div>
+
+        <nav id="nav" class="hidden">
             <a href="#video_section">
                 <h6>VIDEOS</h6>
             </a>
@@ -35,6 +39,8 @@
         </nav>
         <img id="logo" src="assets/designElementer/owmiLogo.png" alt="logo owmi">
     </header>
+
+
 
 
 
@@ -64,13 +70,14 @@
 
             <a href="https://www.youtube.com/channel/UCTnEVwG_rxvGZvJjQbYDu6g/featured?app=desktop" target="blank"><img class="soMe_ikon" src="assets/SoMe/youtube%2016.39.32.svg" alt="watch owmi"></a>
 
-            <a href="mailto: contact@owmi.com"><img class="soMe_ikon" src="assets/SoMe/email%2016.39.32.svg" alt="contact owmi"></a>
+            <a href="mailto:contact@owmi.com"><img class="soMe_ikon" src="assets/SoMe/email%2016.39.32.svg" alt="contact owmi"></a>
 
         </div>
     </section>
 
     <div id="lp_owmi">
-        <img src="billederTilWeb/owmiart.png" alt="Illustration som skriver OWMI">
+        <img src="assets/designElementer/SVG/Owmisvg.svg" alt="Illustration som skriver OWMI">
+
     </div>
 
     <section id="baggrund_bund">
@@ -125,24 +132,7 @@
                 </article>
             </template>
 
-
-
-            <!--
-        <div class="nyheder_col">
-            <h4>OVERSKRIFT</h4>
-            <div class="nyheder_col_top">
-                <img src="billederTilWeb/nyheder_1.jpg" alt="">
-            </div>
-            <div class="nyheder_col_bund">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque officiis itaque quasi possimus fugit ratione voluptatibus in inventore distinctio veniam, labore qui pariatur, ut obcaecati architecto iure similique laboriosam a.</p>
-            </div>
-        </div>
--->
-
         </section>
-
-        <!--        <div class="design_element_o"></div>-->
-
 
         <section id="koncerter">
             <H4>CONCERTS</H4>
@@ -151,7 +141,6 @@
                 <h4 class="koncert_h4"></h4>
                 <img class="koncert_img">
                 <div id="koncert_info">
-                    <!--                    <p class="koncert_p"></p>-->
                     <p class="koncert_p2"></p>
                 </div>
             </template>
@@ -170,7 +159,6 @@
             </svg>
             <div id="om_content">
                 <div id="om_content_top">
-                    <!--                    <h4>OWMI presents you with a forward thinking univers and balances organic instrumentation with electronic elements. Associations are many and easily connect you with Frank Ocean, Vampire Weekend, Dirty Projectors and Kendric Lamar, but OWMI are without a doubt their own.</h4>-->
                 </div>
                 <div id="lyt_knap">
                     <a href="https://open.spotify.com/artist/2QHpjVyj9hRAS3WWjAnn26" target="_blank">
@@ -196,7 +184,7 @@
 
                 <a href="https://www.youtube.com/channel/UCTnEVwG_rxvGZvJjQbYDu6g/featured?app=desktop" target="blank"><img class="soMe_ikon" src="assets/SoMe/youtube%2016.39.32.svg" alt="watch owmi"></a>
 
-                <a href="mailto: contact@owmi.com"><img class="soMe_ikon" src="assets/SoMe/email%2016.39.32.svg" alt="contact owmi"></a>
+                <a href="mailto:contact@owmi.com"><img class="soMe_ikon" src="assets/SoMe/email%2016.39.32.svg" alt="contact owmi"></a>
             </div>
             <div id="footer_info">
                 <h5>2019 Macaw Recordings</h5>
@@ -206,24 +194,12 @@
     </section>
 
     <script>
-        //    cykel.billeder.forEach(b => {});
-
         const logo = document.querySelectorAll('#orange path')
 
         for (let i = 0; i < logo.length; i++) {
             console.log(`Letter ${i} is ${logo[i].getTotalLength()}`)
         }
 
-        //  Determine
-        // if an element is in the viewport * (c) 2017 Chris Ferdinandi, MIT License, https / gomakethings.com * @param {
-        // Node
-        // }
-        // elem The element * @return {
-        // Boolean
-        // }
-        // Returns true
-        // if element is in the viewport
-        //
         var isInViewport = function(elem) {
             var distance = elem.getBoundingClientRect();
             return (distance.top >= 0 &&
@@ -233,8 +209,11 @@
         };
         document.addEventListener("DOMContentLoaded", findPink);
 
+
         function findPink() {
             console.log("heybro");
+            document.querySelector("#menu_kasse").addEventListener("click", toogleMenu);
+
             var findMe = document.querySelector('#pink');
             window.addEventListener('scroll', function(event) {
 
@@ -249,6 +228,24 @@
                 }
             }, false);
         }
+
+        function toogleMenu() {
+
+
+            document.querySelector("#nav").classList.toggle("hidden");
+
+            let erSkjult = document.querySelector("#nav").classList.contains("hidden");
+
+            if (erSkjult == true) {
+                document.querySelector("#menu_kasse").textContent = "MENU";
+
+            } else {
+
+                document.querySelector("#menu_kasse").textContent = "CLOSE";
+            }
+
+        }
+
 
         function fillPink() {
             document.querySelector("#pink").classList.add("fill-ani-pink");
@@ -296,8 +293,11 @@
         function fillOrange() {
             this.classList.add("fill-ani-orange");
         }
+
     </script>
     <script src="script.js">
     </script>
 
-</body></html>
+</body>
+
+</html>

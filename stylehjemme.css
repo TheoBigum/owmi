@@ -89,7 +89,7 @@ p {
 
 
 .animation_line_logo {
-    animation: line_logo 1.5s ease forwards 1.s;
+    animation: line_logo 1.5s ease forwards 1s;
 }
 
 .animation_fill_logo {
@@ -132,13 +132,6 @@ p {
     stroke-dashoffset: 2329;
 }
 
-height: 8vh;
-width: 100%;
-position: relative;
-stroke-dasharray: 2293.6;
-stroke-dashoffset: 2293.6;
-
-
 #plus {
     height: 12vw;
     width: 12vw;
@@ -160,6 +153,10 @@ header {
     display: grid;
     grid-template-columns: 50vw 50vw;
     ;
+}
+
+#menu_kasse {
+    display: none;
 }
 
 nav {
@@ -204,7 +201,7 @@ nav {
     background-image: url(billederTilWeb/nybg.jpg);
     z-index: 1;
     background-size: cover;
-    border-top: 1px solid white;
+    border-top: .1px solid #cbcbcb;
 }
 
 #lp_content {
@@ -302,7 +299,7 @@ nav {
 #video_para {
     width: 90vw;
     height: 70vw;
-    margin: 20vw 5vw 0vw 5vw;
+    margin: 30vw 5vw 0vw 5vw;
     grid-row: 4;
     font-size: 1rem;
     line-height: 1.8rem;
@@ -318,7 +315,7 @@ nav {
 }
 
 .nyheder_col {
-    width: 90vwvw;
+    width: 90vw;
     height: 140vw;
 }
 
@@ -326,6 +323,10 @@ nav {
     font-size: 1.2rem;
     line-height: 1.8rem;
 
+}
+
+.nyhed_h4 {
+    margin: 0 0 1vw 0;
 }
 
 .nyhed_img {
@@ -336,7 +337,7 @@ nav {
 }
 
 .nyheder_col_top {
-    width 90vw;
+    width: 90vw;
     max-height: 100vw;
 }
 
@@ -349,7 +350,7 @@ nav {
 
 #koncerter {
     width: 90vw;
-    height: 75vw;
+    height: 65vw;
     margin: 0 5vw 0 5vw;
     display: grid;
     grid-template-columns: 1fr;
@@ -677,8 +678,8 @@ footer {
     }
 
     #lp_owmi {
-        margin: 10vw 20vw;
-        width: 60vw;
+        margin: 10vw 10vw;
+        width: 80vw;
         height: 32vw;
         z-index: 2;
         position: relative;
@@ -760,7 +761,7 @@ footer {
     }
 
     .nyheder_col_top {
-        width 45vw;
+        width: 45vw;
         max-height: 40vw;
         height: 40vw;
         grid-column: 1;
@@ -790,7 +791,7 @@ footer {
         height: 35vw;
         margin: 0 5vw 0 5vw;
         display: grid;
-        grid-template-rows: 30vww;
+        grid-template-rows: 30vw;
         grid-template-columns: 45vw 45vw;
 
     }
@@ -916,11 +917,36 @@ footer {
     }
 
     nav {
-        margin: 1vw 0 0 0vw;
+        margin: 3vw 0 0 0vw;
         position: fixed;
         overflow: hidden;
         z-index: 3;
+        cursor: pointer;
 
+    }
+
+    #menu_kasse {
+        display: grid;
+        width: 5vw;
+        max-height: 3vw;
+        position: fixed;
+        top: 1vw;
+        left: 0.5vw;
+        z-index: 100;
+        color: orange;
+        font-family: 'roboto', sans-serif;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    #menu_kasse:hover {
+        color: white;
+
+    }
+
+    .hidden {
+        opacity: 0;
+        transform: translateX(-100%);
     }
 
 
