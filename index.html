@@ -81,7 +81,8 @@
             <h2>VIDEOS</h2>
 
             <div id="video_menu">
-                <button class="filter filter_valgt valgt" data-kategori="moonshot">Moonshot</button>
+                <button class="filter filter_valgt valgt" data-kategori="Oplev">Discover Owmi</button>
+                <button class="filter" data-kategori="moonshot">Moonshot</button>
                 <button class="filter" data-kategori="chenai">Chenai</button>
                 <button class="filter" data-kategori="tourner">Tourner</button>
                 <button class="filter" data-kategori="beats">Beats and Lies</button>
@@ -99,7 +100,7 @@
 
             </template>
 
-            <h4 id="video_para">We are OWMI. We make music that we love, and have been doing it for 10 years. We just released our first complete album "Tourner", and we have much more to come! </h4>
+            <h4 id="video_para">OWMI is a new Copenhagen based duo cinsisting of Jakob Miang and Bashiw Billow. Their roots extend from East Africa to Brazil. Together they craft experimental sounds enriched by a backcloth of electronic soundscapes and soulful vocals.</h4>
 
         </section>
 
@@ -157,7 +158,7 @@
         </section>
 
         <section id="om">
-            <svg id="ani_logo" width="1347" height="228" viewBox="0 0 1347 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg id="ani_logo" class="hide" width="1347" height="228" viewBox="0 0 1347 228" fill="none" xmlns="http://www.w3.org/2000/svg">
 
                 <path d="M178.59 43.3145H113.258V221H69.3125V43.3145H4.85938V7.71875H178.59V43.3145Z" stroke="orange" stroke-width="8" mask="url(#path-1-outside-1)" />
                 <path d="M374.879 119.193C374.879 140.189 371.168 158.598 363.746 174.418C356.324 190.238 345.68 202.445 331.812 211.039C318.043 219.633 302.223 223.93 284.352 223.93C266.676 223.93 250.904 219.682 237.037 211.186C223.17 202.689 212.428 190.58 204.811 174.857C197.193 159.037 193.336 140.873 193.238 120.365V109.818C193.238 88.8223 196.998 70.3652 204.518 54.4473C212.135 38.4316 222.828 26.1758 236.598 17.6797C250.465 9.08594 266.285 4.78906 284.059 4.78906C301.832 4.78906 317.604 9.08594 331.373 17.6797C345.24 26.1758 355.934 38.4316 363.453 54.4473C371.07 70.3652 374.879 88.7734 374.879 109.672V119.193ZM330.348 109.525C330.348 87.1621 326.344 70.1699 318.336 58.5488C310.328 46.9277 298.902 41.1172 284.059 41.1172C269.312 41.1172 257.936 46.8789 249.928 58.4023C241.92 69.8281 237.867 86.625 237.77 108.793V119.193C237.77 140.971 241.773 157.865 249.781 169.877C257.789 181.889 269.312 187.895 284.352 187.895C299.098 187.895 310.426 182.133 318.336 170.609C326.246 158.988 330.25 142.094 330.348 119.926V109.525Z" stroke="orange" stroke-width="8" mask="url(#path-1-outside-1)" />
@@ -169,6 +170,7 @@
             </svg>
             <div id="om_content">
                 <div id="om_content_top">
+                    <!--                    <h4>OWMI presents you with a forward thinking univers and balances organic instrumentation with electronic elements. Associations are many and easily connect you with Frank Ocean, Vampire Weekend, Dirty Projectors and Kendric Lamar, but OWMI are without a doubt their own.</h4>-->
                 </div>
                 <div id="lyt_knap">
                     <a href="https://open.spotify.com/artist/2QHpjVyj9hRAS3WWjAnn26" target="_blank">
@@ -186,15 +188,15 @@
 
         <footer>
             <div id="footer_SoMe">
-                <img class="soMe_ikon" src="assets/SoMe/facebook.svg" alt="facebook owmi">
+                <a href="https://www.facebook.com/OOWMII/" target="blank"><img class="soMe_ikon" src="assets/SoMe/facebook.svg" alt="fansite owmi"></a>
 
-                <img class="soMe_ikon" src="assets/SoMe/instagram%2016.39.32.svg" alt="instagram owmi">
+                <a href="https://www.instagram.com/oowmii/?hl=da" target="blank"><img class="soMe_ikon" src="assets/SoMe/instagram%2016.39.32.svg" alt="follow owmi"></a>
 
-                <img class="soMe_ikon" src="assets/SoMe/spotify%2016.39.32.svg" alt="spotify owmi">
+                <a href="https://open.spotify.com/artist/2QHpjVyj9hRAS3WWjAnn26" target="blank"><img class="soMe_ikon" src="assets/SoMe/spotify%2016.39.32.svg" alt="listen to owmi"></a>
 
-                <img class="soMe_ikon" src="assets/SoMe/youtube%2016.39.32.svg" alt="youtube owmi">
+                <a href="https://www.youtube.com/channel/UCTnEVwG_rxvGZvJjQbYDu6g/featured?app=desktop" target="blank"><img class="soMe_ikon" src="assets/SoMe/youtube%2016.39.32.svg" alt="watch owmi"></a>
 
-                <img class="soMe_ikon" src="assets/SoMe/email%2016.39.32.svg" alt="email owmi">
+                <a href="mailto: contact@owmi.com"><img class="soMe_ikon" src="assets/SoMe/email%2016.39.32.svg" alt="contact owmi"></a>
             </div>
             <div id="footer_info">
                 <h5>2019 Macaw Recordings</h5>
@@ -251,8 +253,32 @@
         function fillPink() {
             document.querySelector("#pink").classList.add("fill-ani-pink");
 
+            findLogo();
+        }
+
+        function findLogo() {
+            console.log("heybro");
+            var findMe = document.querySelector('#ani_logo');
+            window.addEventListener('scroll', function(event) {
+
+                if (isInViewport(findMe)) {
+                    document.querySelector("#ani_logo").classList.remove("hide");
+
+                    document.querySelector("#ani_logo").classList.add("startanimation");
+
+                    document.querySelector("#ani_logo").addEventListener("animationend", fillOrangeLogo);
+                } else {
+                    console.log('Nope...');
+                }
+            }, false);
+        }
+
+        function fillOrangeLogo() {
+            this.classList.add("fill-ani-orange");
+
             findOrange();
         }
+
 
         function findOrange() {
             var findMe = document.querySelector('#orange');
@@ -270,11 +296,8 @@
         function fillOrange() {
             this.classList.add("fill-ani-orange");
         }
-
     </script>
     <script src="script.js">
     </script>
 
-</body>
-
-</html>
+</body></html>

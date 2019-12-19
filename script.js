@@ -6,7 +6,7 @@
  const forside_temp = document.querySelector("#forside_temp");
 
  let videoer = [];
- let filter = "moonshot";
+ let filter = "Oplev";
  const videoUrl = "https://theobigum.com/owmiWP/wordpress/wp-json/wp/v2/videoer";
  const skabelon = document.querySelector("#video_temp");
  const liste = document.querySelector("#video_content_top");

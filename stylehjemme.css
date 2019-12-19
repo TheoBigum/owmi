@@ -97,46 +97,9 @@ p {
 
 }
 
-#ani_logo path:nth-child(1) {
-    stroke-dasharray: 774.0;
-    stroke-dashoffset: 774.0;
-    animation: line-ani 1.5s ease forwards;
-}
-
-#ani_logo path:nth-child(2) {
-    stroke-dasharray: 1036.3;
-    stroke-dashoffset: 1036.3;
-    animation: line-ani 1.5s ease forwards .3s;
-}
-
-#ani_logo path:nth-child(3) {
-    stroke-dasharray: 1029.2;
-    stroke-dashoffset: 1029.2;
-    animation: line-ani 1.5s ease forwards .6s;
-}
-
-#ani_logo path:nth-child(4) {
-    stroke-dasharray: 1118.6;
-    stroke-dashoffset: 1118.6;
-    animation: line-ani 1.5s ease forwards .9s;
-}
-
-#ani_logo path:nth-child(5) {
-    stroke-dasharray: 1212.1;
-    stroke-dashoffset: 1212.1;
-    animation: line-ani 1.5s ease forwards 1.2s;
-}
-
-#ani_logo path:nth-child(6) {
-    stroke-dasharray: 1078.7;
-    stroke-dashoffset: 1078.7;
-    animation: line-ani 1.5s ease forwards 1.5s;
-}
-
-#ani_logo path:nth-child(7) {
-    stroke-dasharray: 1118.6453857421875;
-    stroke-dashoffset: 1118.6453857421875;
-    animation: line-ani 1.5s ease forwards 1.8s;
+#ani_logo {
+    stroke-dasharray: 1220.0;
+    stroke-dashoffset: 1220.0;
 }
 
 @keyframes line-ani {
@@ -241,7 +204,7 @@ nav {
     background-image: url(billederTilWeb/nybg.jpg);
     z-index: 1;
     background-size: cover;
-    border-top: 2px solid white;
+    border-top: 1px solid white;
 }
 
 #lp_content {
@@ -420,7 +383,7 @@ nav {
 #ani_logo {
     height: 10vh;
     width: 90vw;
-    animation: 1s fill ease forwards 3s;
+    /*    animation: 1s fill ease forwards 3s;*/
     margin: 5vw auto;
 }
 
@@ -682,8 +645,8 @@ footer {
     /******************LANDING PAGE***********************/
 
     #landingpage {
-        width: 90vw;
         height: 70vh;
+
     }
 
     #lp_baggrund {
@@ -848,6 +811,10 @@ footer {
         margin: 0 0 0 5vw;
     }
 
+    #koncerter p {
+        font-size: 1.5rem;
+    }
+
     #koncert_info {
         width: 40vw;
         height: 25vw;
@@ -949,7 +916,7 @@ footer {
     }
 
     nav {
-        margin: 2vw 0 0 2vw;
+        margin: 1vw 0 0 0vw;
         position: fixed;
         overflow: hidden;
         z-index: 3;
@@ -962,7 +929,7 @@ footer {
         height: 15vh;
         position: absolute;
         top: 1vw;
-        left: 85vw;
+        left: 90vw;
         z-index: 1;
     }
 
